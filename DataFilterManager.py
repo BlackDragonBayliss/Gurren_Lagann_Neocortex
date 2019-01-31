@@ -110,9 +110,4 @@ class DataFilterManager:
         }
         return json
 
-    def post_request_bundle(self, json):
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        response = loop.run_until_complete(
-            self.operation_center.node_manager.async_post_data_manager_request_bundle(
-                json))
+
