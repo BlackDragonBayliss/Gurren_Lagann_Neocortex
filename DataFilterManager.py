@@ -1,9 +1,11 @@
 import asyncio
 from threading import Thread
+from NodeRequester import NodeRequester
 
 class DataFilterManager:
     def __init__(self):
-        self.sym = None
+
+        nodeRequester = NodeRequester
         self.list_chosen_data_managers = []
         self.chosen_stock_temp_container = []
         self.operation_center = None
@@ -22,10 +24,9 @@ class DataFilterManager:
         self.isFiveMinuteChangeoverValue = 0
         self.isStockStoreValue = 0
 
-    def setup_data_manager_request_bundler(self, sym, operation_center, time_data_set_manager):
-        self.sym = sym
-        self.operation_center = operation_center
-        self.time_data_set_manager = time_data_set_manager
+
+    def createStockDataSet(self):
+        print(self.nodeRequester.getAllRecordSets())
 
 
     def triFilterNodeRequestProcess(self):
@@ -41,6 +42,12 @@ class DataFilterManager:
                     for fiveMinuteSet in tenMinuteSet.fiveMinuteSets:
                         for stock in fiveMinuteSet.stockSet:
                             stockList.append(stock)
+
+
+
+
+
+
 
 
     def process_stock_store(self, stock):
