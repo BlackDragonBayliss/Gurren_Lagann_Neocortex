@@ -1,1 +1,2 @@
-# Gurren_Lagann_Neocortex
+
+# Higher level brain functionionality for Gurren_Lagann stock trading app.
