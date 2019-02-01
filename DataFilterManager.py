@@ -1,11 +1,15 @@
 import asyncio
 from threading import Thread
+import json
+import requests
+
 from NodeRequester import NodeRequester
+
 
 class DataFilterManager:
     def __init__(self):
 
-        nodeRequester = NodeRequester
+        self.nodeRequester = NodeRequester()
         self.list_chosen_data_managers = []
         self.chosen_stock_temp_container = []
         self.operation_center = None
@@ -24,31 +28,25 @@ class DataFilterManager:
         self.isFiveMinuteChangeoverValue = 0
         self.isStockStoreValue = 0
 
-
     def createStockDataSet(self):
-        print(self.nodeRequester.getAllRecordSets())
+        jsonResponse = self.nodeRequester.getAllRecordSets("02/01/2019")
+        self.triFilterNodeRequestProcess(jsonResponse)
 
-
-    def triFilterNodeRequestProcess(self):
-        #Upon node data retrieval,
-        #Given JSON list of daySets
+    def triFilterNodeRequestProcess(self, jsonResponse):
         stockList = []
-        json = {
-            daySets: {tenMinuteSets: []}
-        }
-        for daySet in json.daySets:
-            for hour in daySet.hourSets:
-                for tenMinuteSet in hour.tenMinuteSets:
-                    for fiveMinuteSet in tenMinuteSet.fiveMinuteSets:
-                        for stock in fiveMinuteSet.stockSet:
+        dayList = []
+        for key, value in jsonResponse.items():
+            dayList.append(value)
+
+        for day_set in dayList[0]:
+            for hour_set in day_set["hour_sets"]:
+                for ten_minute_set in hour_set["ten_minute_sets"]:
+                    for five_minute_set in ten_minute_set["five_minute_sets"]:
+                        for stock in five_minute_set["stock_sets"]:
                             stockList.append(stock)
 
-
-
-
-
-
-
+        # print(len(stockList))
+        print(stockList)
 
     def process_stock_store(self, stock):
         print("hit process_stock_store")
@@ -116,5 +114,3 @@ class DataFilterManager:
             "stock_ask": stock.get_ask()
         }
         return json
-
-

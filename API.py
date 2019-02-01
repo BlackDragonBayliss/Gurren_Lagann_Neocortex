@@ -11,12 +11,17 @@ def __new__(self):
     self.operation_center = Operation_Center()
 
 
-@app.route('/init_system', methods=['POST'])
+@app.route('/initSystem', methods=['POST'])
 def init_system():
     operation_center = Operation_Center()
     operation_center.process_main_process_loop()
     return "initiated"
 
+@app.route('/recordQueries', methods=['POST'])
+def recordQueries():
+    content = request.get_json()
+    print(content)
+    return "Query received"
 
 if __name__ == '__main__':
     app.run(debug=False)
