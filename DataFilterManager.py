@@ -2,14 +2,16 @@ import asyncio
 from threading import Thread
 import json
 import requests
+from DataDisplayer import DataDisplayer
 
 from NodeRequester import NodeRequester
-
+from TimeManager import TimeManager
 
 class DataFilterManager:
     def __init__(self):
 
         self.nodeRequester = NodeRequester()
+        self.dataDisplayer = DataDisplayer()
         self.list_chosen_data_managers = []
         self.chosen_stock_temp_container = []
         self.operation_center = None
@@ -30,23 +32,48 @@ class DataFilterManager:
 
     def createStockDataSet(self):
         jsonResponse = self.nodeRequester.getAllRecordSets("02/01/2019")
-        self.triFilterNodeRequestProcess(jsonResponse)
+        listOfDaylists = self.createListOfDaylists(jsonResponse)
+        stockList = self.generateStockEntryTotalities(listOfDaylists[0][0])
+        self.dataDisplayer.testCase3(stockList)
+        # print(stockList)
 
-    def triFilterNodeRequestProcess(self, jsonResponse):
+    def createListOfDaylists(self, jsonResponse):
         stockList = []
         dayList = []
         for key, value in jsonResponse.items():
             dayList.append(value)
 
-        for day_set in dayList[0]:
-            for hour_set in day_set["hour_sets"]:
-                for ten_minute_set in hour_set["ten_minute_sets"]:
-                    for five_minute_set in ten_minute_set["five_minute_sets"]:
-                        for stock in five_minute_set["stock_sets"]:
-                            stockList.append(stock)
-
+        return dayList
+        # listOfDayLists
+        # print(dayList[0][0])
+        # return
         # print(len(stockList))
-        print(stockList)
+        # print(stockList[0]["epoch_created"])
+
+        # timeManager = TimeManager()
+        # epochFromStock = int(stockList[0]["epoch_created"])
+        # timeResult = timeManager.convertEpochToTime(epochFromStock)
+        # epochResult = timeManager.convertTimeToEpoch(timeResult)
+        #
+        # print("Stock epoch: "+ str(epochFromStock))
+        # print("Transformed time: "+ timeResult)
+        # print("Transformed epoch: "+ str(epochResult))
+
+    def generateStockEntryTotalities(self, daySet):
+        stockList = []
+        for hour_set in daySet["hour_sets"]:
+            for ten_minute_set in hour_set["ten_minute_sets"]:
+                for five_minute_set in ten_minute_set["five_minute_sets"]:
+                    for stock in five_minute_set["stock_sets"]:
+                        stockList.append(stock)
+        return stockList
+
+        # for day_set in dayList[0]:
+        #     for hour_set in day_set["hour_sets"]:
+        #         for ten_minute_set in hour_set["ten_minute_sets"]:
+        #             for five_minute_set in ten_minute_set["five_minute_sets"]:
+        #                 for stock in five_minute_set["stock_sets"]:
+        #                     stockList.append(stock)
 
     def process_stock_store(self, stock):
         print("hit process_stock_store")
