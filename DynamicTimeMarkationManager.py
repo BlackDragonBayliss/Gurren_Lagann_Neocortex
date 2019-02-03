@@ -3,13 +3,13 @@ class DynamicTimeMarkationManager:
     def __init__(self):
         self.boughtBidPrice = 0
 
-    def determineDynamicTimeInterval(self, listOfObjects):
+    def determineDynamicTimeInterval(self, stockList):
         timeIntervalMatrix = []
         hourTimeDifferential = 0
         minuteTimeDifferential = 0
         secondTimeDifferential = 0
-        stock1 = listOfObjects[0]
-        stock2 = listOfObjects[1]
+        stock1 = stockList[0]
+        stock2 = stockList[1]
 
         timeMatrix1 = stock1[4] # Format [8,30,0]
         timeMatrix2 = stock2[4]
@@ -34,8 +34,13 @@ class DynamicTimeMarkationManager:
             timeIntervalMatrix.append(0)
         return timeIntervalMatrix
 
-    def generateMarkationJSON(self):
-        pass
-    def calculcateMarkationJSON(self):
-        pass
-
+    def calculateDefiniteMarkationList(self, stockList):
+        #Definite set entries
+        intervalMatrix = self.determineDynamicTimeInterval(stockList)
+        markationList = []
+        return markationList
+    def calculateLooseMarkationList(self, stockList):
+        #First entry start point
+        intervalMatrix = self.determineDynamicTimeInterval(stockList)
+        markationList = []
+        return markationList
