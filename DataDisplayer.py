@@ -46,15 +46,6 @@ class DataDisplayer:
 
 
     def testCase3(self, dataList):
-        # x axis values
-
-
-        # x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-        # corresponding y axis values
-        # y = dataList#[39.27, 39.30, 39.38, 39.35, 39.30, 39.26, 39.35, 39.40, 39.37, 39.29 ]
-
-
         x = []
         y = []
         stockCount = 0
