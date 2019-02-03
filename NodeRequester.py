@@ -11,13 +11,12 @@ class NodeRequester:
         self.chosen_stock_temp_container = []
 
     def getAllRecordSets(self, date):
-
         response = self.postRequest(
             {
-                    "request_type":"neocortex",
-                    "isGetAllDaysByDate":1,
-                    "date": date
-              })
+                "request_type": "neocortex",
+                "isGetAllDaysByDate": 1,
+                "date": date
+            })
         return response
 
     def postRequest(self, jsonData):
@@ -26,17 +25,10 @@ class NodeRequester:
         response = loop.run_until_complete(
             self.async_post_neocortex(
                 jsonData))
-
         jsonResponse = JSON.loads(response)
-
-        # dayList = []
-        # for key, value in jsonResponse.items():
-        #     for day in value:
-        #         dayList.append(day)
-        # print(len(dayList))
         return jsonResponse
 
-    async def fetch(self,session, url, data):
+    async def fetch(self, session, url, data):
         async with session.post(url, data=data) as response:
             return await response.text()
 
