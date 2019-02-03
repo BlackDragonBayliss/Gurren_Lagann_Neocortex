@@ -3,12 +3,12 @@
 class ObservanceObject:
 
     def __init__(self):
-        boughtBidPrice = 0
-        askSellPrice = 0
-        winOrLose = 0
-        isHighDelimiterMet = 0
-        isLowDelimiterMet = 0
-        buyStartTime = 0
+        self.boughtBidPrice = 0
+        self.askSellPrice = 0
+        self.winOrLose = 0
+        self.isHighDelimiterMet = 0
+        self.isLowDelimiterMet = 0
+        self.buyStartTime = 0
 
     def setBoughtBidPrice(self, case):
         self.boughtBidPrice = case
