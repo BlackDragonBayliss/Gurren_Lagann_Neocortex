@@ -5,3 +5,4 @@ class Scenario:
         self.chosen_stock_temp_container = []
 
     def generateScenario(self):
+        pass
