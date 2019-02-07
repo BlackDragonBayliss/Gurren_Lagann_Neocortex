@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 
 class DynamicTimeMarkationManager:
     def __init__(self):
@@ -43,34 +44,23 @@ class DynamicTimeMarkationManager:
         #First entry start point
         intervalMatrix = self.determineDynamicTimeInterval(stockList)
         #Obtain matrix interval
-        # Locate each stock price at interval.
-        # We have time in [hour,minute,second]
         index = 0
         initialStock = stockList[0]
-        initialStockTime = []
-
-        # initialStockTime.append(initialStock.hour_created)
-        # initialStockTime.append(initialStock.minute_created)
-        # initialStockTime.append(initialStock.second_created)
-
-        # nextHour = initialStockTime[0]
-
-        nextMinute = initialStock.minute_created + intervalMatrix[1]
-
-
-        # nextMinute
-        # nextTimeIntervalToFind = initialMinute +
-
+        indexRange = []
+        stockFound = None
+        initialStockDateTime = datetime(2012, 9, 16, initialStock.hour_created, initialStock.minute_created, initialStock.second_created)
+        nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
         for stock in stockList:
             if(index == 0):
-                initialStockTime.append(stock.hour_created)
-                initialStockTime.append(stock.minute_created)
-                initialStockTime.append(stock.second_created)
-
-            if():
                 pass
-
-
+            if(stock.minute_created == nextStockDateTime.minute):
+                # nextStockDateTime
+                indexRange.append(index)
+                stockFound = stock
+            index += 1
+        # Get splice
+        print(indexRange)
+        print(stockFound)
 
 
         markationList = []

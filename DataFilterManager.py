@@ -38,26 +38,11 @@ class DataFilterManager:
         # print(stockList)
 
     def createListOfDaylists(self, jsonResponse):
-        stockList = []
         dayList = []
         for key, value in jsonResponse.items():
             dayList.append(value)
 
         return dayList
-        # listOfDayLists
-        # print(dayList[0][0])
-        # return
-        # print(len(stockList))
-        # print(stockList[0]["epoch_created"])
-
-        # timeManager = TimeManager()
-        # epochFromStock = int(stockList[0]["epoch_created"])
-        # timeResult = timeManager.convertEpochToTime(epochFromStock)
-        # epochResult = timeManager.convertTimeToEpoch(timeResult)
-        #
-        # print("Stock epoch: "+ str(epochFromStock))
-        # print("Transformed time: "+ timeResult)
-        # print("Transformed epoch: "+ str(epochResult))
 
     def generateStockEntryTotalities(self, daySet):
         stockList = []
@@ -67,6 +52,8 @@ class DataFilterManager:
                     for stock in five_minute_set["stock_sets"]:
                         stockList.append(stock)
         return stockList
+
+
 
         # for day_set in dayList[0]:
         #     for hour_set in day_set["hour_sets"]:
