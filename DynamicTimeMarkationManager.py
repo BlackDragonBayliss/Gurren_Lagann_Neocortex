@@ -42,5 +42,36 @@ class DynamicTimeMarkationManager:
     def calculateLooseMarkationList(self, stockList):
         #First entry start point
         intervalMatrix = self.determineDynamicTimeInterval(stockList)
+        #Obtain matrix interval
+        # Locate each stock price at interval.
+        # We have time in [hour,minute,second]
+        index = 0
+        initialStock = stockList[0]
+        initialStockTime = []
+
+        # initialStockTime.append(initialStock.hour_created)
+        # initialStockTime.append(initialStock.minute_created)
+        # initialStockTime.append(initialStock.second_created)
+
+        # nextHour = initialStockTime[0]
+
+        nextMinute = initialStock.minute_created + intervalMatrix[1]
+
+
+        # nextMinute
+        # nextTimeIntervalToFind = initialMinute +
+
+        for stock in stockList:
+            if(index == 0):
+                initialStockTime.append(stock.hour_created)
+                initialStockTime.append(stock.minute_created)
+                initialStockTime.append(stock.second_created)
+
+            if():
+                pass
+
+
+
+
         markationList = []
         return markationList

@@ -8,10 +8,12 @@ class ScenarioManager:
     def createScenario(self):
         pass
 
+
+    def determineWinOrLose(self, calculatedMarkationResults):
+        for markationResult in calculatedMarkationResults:
+            pass
     def organizeScenarioParameters(self, askList, bidList):
+        self.generateObservanceObject()
 
-
-
-        generateObservanceObject()
     def generateObservanceObject(self):
         observanceObject = ObservanceObject()
