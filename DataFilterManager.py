@@ -53,15 +53,6 @@ class DataFilterManager:
                         stockList.append(stock)
         return stockList
 
-
-
-        # for day_set in dayList[0]:
-        #     for hour_set in day_set["hour_sets"]:
-        #         for ten_minute_set in hour_set["ten_minute_sets"]:
-        #             for five_minute_set in ten_minute_set["five_minute_sets"]:
-        #                 for stock in five_minute_set["stock_sets"]:
-        #                     stockList.append(stock)
-
     def process_stock_store(self, stock):
         print("hit process_stock_store")
         if (self.is_data_bundle_initialization_required):

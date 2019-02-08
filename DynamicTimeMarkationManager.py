@@ -3,22 +3,23 @@ from datetime import datetime, timedelta
 class DynamicTimeMarkationManager:
     def __init__(self):
         self.boughtBidPrice = 0
+        self.stockRangeComposite = []
+        self.stockRangeContainer = []
+        self.isStockRangeContainerChangeOver = True
 
     def determineDynamicTimeInterval(self, stockList):
         timeIntervalMatrix = []
         hourTimeDifferential = 0
         minuteTimeDifferential = 0
         secondTimeDifferential = 0
-        stock1 = stockList[0]
-        stock2 = stockList[1]
-
-        timeMatrix1 = stock1[4] # Format [8,30,0]
-        timeMatrix2 = stock2[4]
-
-        hourTimeDifferential = timeMatrix2[0] - timeMatrix1[0]
-        minuteTimeDifferential = timeMatrix2[1] - timeMatrix1[1]
-        secondTimeDifferential = timeMatrix2[2] - timeMatrix1[2]
-
+        stock1 = stockList[(len(stockList)-2)]
+        stock2 = stockList[(len(stockList)-1)]
+        # print(stock1)
+        # print(stock2)
+        hourTimeDifferential = int(stock2["hour_created"]) - int(stock1["hour_created"])
+        minuteTimeDifferential = int(stock2["minute_created"]) - int(stock1["minute_created"])
+        secondTimeDifferential = int(stock2["second_created"]) - int(stock1["second_created"])
+        #
         if(hourTimeDifferential != 0):
             timeIntervalMatrix.append(hourTimeDifferential)
         else:
@@ -45,23 +46,36 @@ class DynamicTimeMarkationManager:
         intervalMatrix = self.determineDynamicTimeInterval(stockList)
         #Obtain matrix interval
         index = 0
-        initialStock = stockList[0]
+        initialStock = stockList[(len(stockList)-1)]
         indexRange = []
         stockFound = None
-        initialStockDateTime = datetime(2012, 9, 16, initialStock.hour_created, initialStock.minute_created, initialStock.second_created)
+        stockRangeComposite = []
+        stockRangeContainer = []
+
+        stockRangeComposite.append(stockRangeContainer)
+        initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]), int(initialStock["minute_created"]), int(initialStock["second_created"]))
         nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        for stock in stockList:
-            if(index == 0):
-                pass
-            if(stock.minute_created == nextStockDateTime.minute):
-                # nextStockDateTime
-                indexRange.append(index)
-                stockFound = stock
+        print("diety minute: "+str(nextStockDateTime.minute))
+        # for stock in stockList:
+        for stock in stockList[::-1]:
+            createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]), int(stock["second_created"]))
+            print(createdStockDateTime.minute)
+
+            if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
+                print("success at: "+str(createdStockDateTime.minute))
+                self.isStockRangeContainerChangeOver = False
+                nextStockDateTime += timedelta(minutes=30)
+                print("nextStockDateTime set to: "+ str(nextStockDateTime.minute))
+                stockRangeContainer = []
+                stockRangeComposite.append(stockRangeContainer)
+
+            if (createdStockDateTime.minute != nextStockDateTime.minute):
+                self.isStockRangeContainerChangeOver = True
+            stockRangeContainer.append(stock)
             index += 1
         # Get splice
-        print(indexRange)
-        print(stockFound)
-
-
-        markationList = []
-        return markationList
+        print(len(stockList))
+        print(initialStock)
+        print(len(stockRangeComposite))
+        print(stockRangeComposite[3])
+        return stockRangeComposite

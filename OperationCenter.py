@@ -24,12 +24,13 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def getNodeInformation(self):
-        response = self.nodeRequester.getAllRecordSets()
+        print("hit")
+        response = self.nodeRequester.getAllRecordSets("02/07/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
+
         stockEntryTotalitiesList = []
         for day in dayList:
-            stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day))
-        print(stockEntryTotalitiesList[0])
+            stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day[0]))
+        # print(stockEntryTotalitiesList[0][0])
+        markationList = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalitiesList[0])
 
-        # self.dynamicTimeMarkationManager
-        # self.calculateLooseMarkationList
