@@ -42,13 +42,9 @@ class DynamicTimeMarkationManager:
         markationList = []
         return markationList
     def calculateLooseMarkationList(self, stockList):
-        #First entry start point
-        intervalMatrix = self.determineDynamicTimeInterval(stockList)
-        #Obtain matrix interval
+        # intervalMatrix = self.determineDynamicTimeInterval(stockList)
         index = 0
         initialStock = stockList[(len(stockList)-1)]
-        indexRange = []
-        stockFound = None
         stockRangeComposite = []
         stockRangeContainer = []
 

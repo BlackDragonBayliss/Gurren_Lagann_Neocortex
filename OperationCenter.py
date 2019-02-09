@@ -24,7 +24,6 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def getNodeInformation(self):
-        print("hit")
         response = self.nodeRequester.getAllRecordSets("02/07/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
 
