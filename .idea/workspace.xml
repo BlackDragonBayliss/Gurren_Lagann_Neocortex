@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" afterPath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,8 +94,8 @@
       <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="436">
+              <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="74" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -411,8 +410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="436">
+          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="74" selection-end-column="39" />
           <folding />
         </state>
       </provider>

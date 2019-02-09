@@ -69,9 +69,8 @@ class DynamicTimeMarkationManager:
                 self.isStockRangeContainerChangeOver = True
             stockRangeContainer.append(stock)
             index += 1
-        # Get splice
-        print(len(stockList))
-        print(initialStock)
-        print(len(stockRangeComposite))
-        print(stockRangeComposite[3])
+        # print(len(stockList))
+        # print(initialStock)
+        # print(len(stockRangeComposite))
+        # print(stockRangeComposite[3])
         return stockRangeComposite
