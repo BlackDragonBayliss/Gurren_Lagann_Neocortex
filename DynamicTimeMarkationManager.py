@@ -69,6 +69,7 @@ class DynamicTimeMarkationManager:
                 self.isStockRangeContainerChangeOver = True
             stockRangeContainer.append(stock)
             index += 1
+
         # print(len(stockList))
         # print(initialStock)
         # print(len(stockRangeComposite))

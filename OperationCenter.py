@@ -3,6 +3,7 @@ from threading import Thread
 from NodeRequester import NodeRequester
 from DataFilterManager import DataFilterManager
 from DynamicTimeMarkationManager import DynamicTimeMarkationManager
+from ScenarioManager import ScenarioManager
 
 class OperationCenter:
     def __init__(self):
@@ -24,6 +25,7 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def getNodeInformation(self):
+        scenarioManager = ScenarioManager()
         response = self.nodeRequester.getAllRecordSets("02/07/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
 
@@ -32,4 +34,12 @@ class OperationCenter:
             stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day[0]))
         # print(stockEntryTotalitiesList[0][0])
         markationList = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalitiesList[0])
+
+        observanceObjectResults = scenarioManager.calculateMarkationResults(markationList)
+
+        for observanceObject in observanceObjectResults:
+
+            print(observanceObject.getScenarioOutcome())
+
+
 
