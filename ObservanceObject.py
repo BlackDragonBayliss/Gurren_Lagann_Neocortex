@@ -19,13 +19,13 @@ class ObservanceObject:
 
     def setHighDelimiter(self, delimiter):
         self.highDelimiter = delimiter
-    def getHighDelimiter(self, delimiter):
-        self.highDelimiter = delimiter
+    def getHighDelimiter(self):
+        return self.highDelimiter
 
     def setLowDelimiter(self, delimiter):
         self.lowDelimiter = delimiter
-    def getLowDelimiter(self, delimiter):
-        self.lowDelimiter = delimiter
+    def getLowDelimiter(self, ):
+        return self.lowDelimiter
 
     def setIsHighDelimiterMet(self, case):
         self.isHighDelimiterMet = case

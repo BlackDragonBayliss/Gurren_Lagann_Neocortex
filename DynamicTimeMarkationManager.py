@@ -51,17 +51,17 @@ class DynamicTimeMarkationManager:
         stockRangeComposite.append(stockRangeContainer)
         initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]), int(initialStock["minute_created"]), int(initialStock["second_created"]))
         nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        print("diety minute: "+str(nextStockDateTime.minute))
+        # print("diety minute: "+str(nextStockDateTime.minute))
         # for stock in stockList:
         for stock in stockList[::-1]:
             createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]), int(stock["second_created"]))
-            print(createdStockDateTime.minute)
+            # print(createdStockDateTime.minute)
 
             if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-                print("success at: "+str(createdStockDateTime.minute))
+                # print("success at: "+str(createdStockDateTime.minute))
                 self.isStockRangeContainerChangeOver = False
                 nextStockDateTime += timedelta(minutes=30)
-                print("nextStockDateTime set to: "+ str(nextStockDateTime.minute))
+                # print("nextStockDateTime set to: "+ str(nextStockDateTime.minute))
                 stockRangeContainer = []
                 stockRangeComposite.append(stockRangeContainer)
 

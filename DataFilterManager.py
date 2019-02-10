@@ -31,11 +31,11 @@ class DataFilterManager:
         self.isStockStoreValue = 0
 
     def createStockDataSet(self):
-        jsonResponse = self.nodeRequester.getAllRecordSets("02/01/2019")
+        jsonResponse = self.nodeRequester.getAllRecordSets("02/08/2019")
         listOfDaylists = self.createListOfDaylists(jsonResponse)
+        # print()
         stockList = self.generateStockEntryTotalities(listOfDaylists[0][0])
         self.dataDisplayer.testCase3(stockList)
-        # print(stockList)
 
     def createListOfDaylists(self, jsonResponse):
         dayList = []

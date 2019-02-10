@@ -26,19 +26,24 @@ class OperationCenter:
 
     def getNodeInformation(self):
         scenarioManager = ScenarioManager()
-        response = self.nodeRequester.getAllRecordSets("02/07/2019")
+        response = self.nodeRequester.getAllRecordSets("02/08/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
-
+        observanceObjectResultsComposite = []
         stockEntryTotalitiesList = []
-        for day in dayList:
-            stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day[0]))
-        # print(stockEntryTotalitiesList[0][0])
-        markationList = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalitiesList[0])
+        print(len(dayList[0]))
+        for day in dayList[0]:
+            # print(day[2])
+            # print(day)
+            stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day))
+        print(len(stockEntryTotalitiesList))
+        for stockEntryTotalities in stockEntryTotalitiesList:
+            markationList = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalities)
+            observanceObjectResults = scenarioManager.calculateMarkationResults(markationList)
+            observanceObjectResultsComposite.append(observanceObjectResults)
+        print(len(observanceObjectResultsComposite))
 
-        observanceObjectResults = scenarioManager.calculateMarkationResults(markationList)
-
-        for observanceObject in observanceObjectResults:
-
+        for observanceObject in observanceObjectResultsComposite[0]:
+            # print(observanceObject.getBoughtBidPrice())
             print(observanceObject.getScenarioOutcome())
 
 

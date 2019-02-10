@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataFilterManager.py" afterPath="$PROJECT_DIR$/DataFilterManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" afterPath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObservanceObject.py" afterPath="$PROJECT_DIR$/ObservanceObject.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="451">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -40,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="319">
+              <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -53,8 +54,8 @@
       <file leaf-file-name="ObservanceObject.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObservanceObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="-4">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -63,8 +64,8 @@
       <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state relative-caret-position="13">
+              <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -73,8 +74,8 @@
       <file leaf-file-name="DataFilterManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+            <state relative-caret-position="186">
+              <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -121,6 +122,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>calculateMarkationResults</find>
+      <find>generateStockEntryTotalities</find>
+      <find>stockEntryTotalitiesList</find>
+      <find>calculateLooseMarkationList</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -141,14 +150,14 @@
         <option value="$PROJECT_DIR$/GenerationDataMatrixFactory.py" />
         <option value="$PROJECT_DIR$/ScenarioFactory.py" />
         <option value="$PROJECT_DIR$/NodeRequester.py" />
-        <option value="$PROJECT_DIR$/DataFilterManager.py" />
         <option value="$PROJECT_DIR$/API.py" />
         <option value="$PROJECT_DIR$/Scenario.py" />
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
         <option value="$PROJECT_DIR$/ObservanceObject.py" />
-        <option value="$PROJECT_DIR$/OperationCenter.py" />
+        <option value="$PROJECT_DIR$/DataFilterManager.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
+        <option value="$PROJECT_DIR$/OperationCenter.py" />
       </list>
     </option>
   </component>
@@ -355,14 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scenario.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -373,37 +374,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+    <entry file="file://$PROJECT_DIR$/ObservanceObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        <state relative-caret-position="-4">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObservanceObject.py">
+    <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="319">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OperationCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="451">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
