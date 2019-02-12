@@ -31,3 +31,9 @@ class TimeManager:
         pattern = '%d.%m.%Y %H:%M:%S'
         epoch = int(time.mktime(time.strptime(dateTime, pattern)))
         return epoch
+
+    def isStockWithinTradingTimeBound(self, stock):
+        if(int(stock["hour_created"]) >= 14):
+            return False
+        return True
+

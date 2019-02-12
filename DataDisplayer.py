@@ -48,29 +48,35 @@ class DataDisplayer:
     def testCase3(self, dataList):
         x = []
         y = []
+        y2= []
         stockCount = 0
         for stock in dataList:
             stockCount += 1
             x.append(stockCount)
-            y.append(float(stock["last"]))
-
-        print(x[0:50])
-        print(y[0:50])
+            y.append(float(stock["bid"]))
+            y2.append(float(stock["ask"]))
+            print(float(stock["bid"]))
+        # print(x)
+        # print(x[0:50])
+        # print(y[0:50])
         # plotting the points
-        plt.plot(x, y, color='blue', linestyle='dashed', linewidth=3,
-                 marker='o', markerfacecolor='black', markersize=6)
+        plt.plot(x[0:100], y[0:100], color='blue', linestyle='dashed', linewidth=3,
+                 marker='o', markerfacecolor='black', markersize=5)
 
-        # setting x and y axis range
-        plt.xlim(1, 51)
-        plt.ylim(39.10, 39.40)
+        plt.plot(x[0:100], y2[0:100], color='red', linestyle='dashed', linewidth=3,
+                 marker='o', markerfacecolor='black', markersize=5)
 
-        # naming the x axis
+        # # # setting x and y axis range
+        plt.xlim(1, 101)
+        plt.ylim(31.80, 32.40)
+        #
+        # # naming the x axis
         plt.xlabel('Time - axis')
-        # naming the y axis
+        # # naming the y axis
         plt.ylabel('Price - axis')
-
-        # giving a title to my graph
+        #
+        # # giving a title to my graph
         plt.title('Magic graph of '+ dataList[0]["symbol"])
-
-        # function to show the plot
+        #
+        # # function to show the plot
         plt.show()

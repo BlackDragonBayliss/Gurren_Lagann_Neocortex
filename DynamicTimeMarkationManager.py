@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from TimeManager import TimeManager
 
 class DynamicTimeMarkationManager:
     def __init__(self):
@@ -41,32 +42,65 @@ class DynamicTimeMarkationManager:
         intervalMatrix = self.determineDynamicTimeInterval(stockList)
         markationList = []
         return markationList
+
+    def calculateFullRangeList(self, stockList):
+        timeManager = TimeManager()
+        # intervalMatrix = self.determineDynamicTimeInterval(stockList)
+        index = 0
+        # initialStock = stockList[(len(stockList)-1)]
+        # stockRangeComposite = []
+        stockRangeContainer = []
+        # stockRangeComposite.append(stockRangeContainer)
+
+        # initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]), int(initialStock["minute_created"]), int(initialStock["second_created"]))
+        # nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
+
+        for stock in stockList[::-1]:
+            # createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]), int(stock["second_created"]))
+
+            if(timeManager.isStockWithinTradingTimeBound(stock) == False):
+                break
+            #
+            # if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
+            #     self.isStockRangeContainerChangeOver = False
+            #     stockRangeContainer = []
+            #     stockRangeComposite.append(stockRangeContainer)
+
+            # if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
+            #     nextStockDateTime += timedelta(minutes=30)
+            #     self.isStockRangeContainerChangeOver = True
+
+            stockRangeContainer.append(stock)
+            index += 1
+        return stockRangeContainer
+
     def calculateLooseMarkationList(self, stockList):
+        timeManager = TimeManager()
         # intervalMatrix = self.determineDynamicTimeInterval(stockList)
         index = 0
         initialStock = stockList[(len(stockList)-1)]
         stockRangeComposite = []
         stockRangeContainer = []
-
         stockRangeComposite.append(stockRangeContainer)
+
         initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]), int(initialStock["minute_created"]), int(initialStock["second_created"]))
         nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        # print("diety minute: "+str(nextStockDateTime.minute))
-        # for stock in stockList:
+
         for stock in stockList[::-1]:
             createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]), int(stock["second_created"]))
-            # print(createdStockDateTime.minute)
+
+            if(timeManager.isStockWithinTradingTimeBound(stock) == False):
+                break
 
             if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-                # print("success at: "+str(createdStockDateTime.minute))
                 self.isStockRangeContainerChangeOver = False
-                nextStockDateTime += timedelta(minutes=30)
-                # print("nextStockDateTime set to: "+ str(nextStockDateTime.minute))
                 stockRangeContainer = []
                 stockRangeComposite.append(stockRangeContainer)
 
-            if (createdStockDateTime.minute != nextStockDateTime.minute):
+            if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
+                nextStockDateTime += timedelta(minutes=30)
                 self.isStockRangeContainerChangeOver = True
+
             stockRangeContainer.append(stock)
             index += 1
 
@@ -74,4 +108,15 @@ class DynamicTimeMarkationManager:
         # print(initialStock)
         # print(len(stockRangeComposite))
         # print(stockRangeComposite[3])
+        # stockRangeComposite = self.clearEmptyStockRangeContainerFromComposite(stockRangeComposite)
+
         return stockRangeComposite
+
+    def clearEmptyStockRangeContainerFromComposite(self, stockRangeComposite):
+        index = 0
+        for stockRangeContainer in stockRangeComposite:
+            if(len(stockRangeContainer) == 0):
+                stockRangeComposite.pop(index)
+            index += 1
+        return stockRangeComposite
+

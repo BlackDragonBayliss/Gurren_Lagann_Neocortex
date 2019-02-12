@@ -3,14 +3,27 @@
 class ObservanceObject:
 
     def __init__(self):
-        self.boughtBidPrice = 0
-        self.askSellPrice = 0
-        self.winOrLose = 0
+        self.fullRangeSet = None
+        self.markationSet = None
+
+        self.highDelimiter = None
+        self.lowDelimiter = None
         self.isHighDelimiterMet = 0
         self.isLowDelimiterMet = 0
-        self.buyStartTime = 0
-        self.markationSet = None
+
+        self.boughtBidPrice = 0
+        self.askSellPrice = 0
         self.scenarioOutcome = None
+
+        self.winOrLose = 0
+        self.buyStartTime = 0
+
+
+
+    def setFullRangeSet(self,fullRangeSet):
+        self.fullRangeSet = fullRangeSet
+    def getFullRangeSet(self):
+        return self.fullRangeSet
 
     def setMarkationSet(self, markationSet):
         self.markationSet = markationSet
@@ -29,8 +42,13 @@ class ObservanceObject:
 
     def setIsHighDelimiterMet(self, case):
         self.isHighDelimiterMet = case
+    def getIsHighDelimiterMet(self):
+        return self.isHighDelimiterMet
+
     def setIsLowDelimiterMet(self, case):
         self.isLowDelimiterMet = case
+    def getIsLowDelimiterMet(self):
+        return self.isLowDelimiterMet
 
     def setBoughtBidPrice(self, case):
         self.boughtBidPrice = case

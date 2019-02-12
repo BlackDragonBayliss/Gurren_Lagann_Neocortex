@@ -4,6 +4,7 @@ from NodeRequester import NodeRequester
 from DataFilterManager import DataFilterManager
 from DynamicTimeMarkationManager import DynamicTimeMarkationManager
 from ScenarioManager import ScenarioManager
+from DataDisplayer import DataDisplayer
 
 class OperationCenter:
     def __init__(self):
@@ -24,27 +25,47 @@ class OperationCenter:
         self.event_trigger_top_stock_gather_process_phase_one()
         self.is_condition_top_stock_pull_gather = True
 
-    def getNodeInformation(self):
+    def getNodeInformation(self, caseCalculationType):
         scenarioManager = ScenarioManager()
         response = self.nodeRequester.getAllRecordSets("02/08/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
         observanceObjectResultsComposite = []
         stockEntryTotalitiesList = []
-        print(len(dayList[0]))
         for day in dayList[0]:
-            # print(day[2])
-            # print(day)
             stockEntryTotalitiesList.append(self.dataFilterManager.generateStockEntryTotalities(day))
-        print(len(stockEntryTotalitiesList))
-        for stockEntryTotalities in stockEntryTotalitiesList:
-            markationList = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalities)
-            observanceObjectResults = scenarioManager.calculateMarkationResults(markationList)
-            observanceObjectResultsComposite.append(observanceObjectResults)
-        print(len(observanceObjectResultsComposite))
+        # print(len(stockEntryTotalitiesList))
 
-        for observanceObject in observanceObjectResultsComposite[0]:
-            # print(observanceObject.getBoughtBidPrice())
-            print(observanceObject.getScenarioOutcome())
+        if (caseCalculationType == 0):
+            for stockEntryTotalities in stockEntryTotalitiesList:
+                dataDisplayer = DataDisplayer()
+                fullRangeStockList = self.dynamicTimeMarkationManager.calculateFullRangeList(stockEntryTotalities)
+                dataDisplayer.testCase3(fullRangeStockList)
+                break
+
+            #     observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
+            #     observanceObjectResultsComposite.append(observanceObjectResult)
+            #
+            # for observanceObjectResult in observanceObjectResultsComposite:
+            #     print(observanceObjectResult.getScenarioOutcome())
+
+        if (caseCalculationType == 1):
+            for stockEntryTotalities in stockEntryTotalitiesList:
+                markationStockRangeComposite = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalities)
+                observanceObjectResults = scenarioManager.calculateMarkationResults(markationStockRangeComposite)
+                observanceObjectResultsComposite.append(observanceObjectResults)
+
+            for observanceObjectResultsList in observanceObjectResultsComposite:
+                for observanceObject in observanceObjectResultsList:
+                    print(observanceObject.getScenarioOutcome())
+
+        # print(len(markationStockRangeComposite))
+        # print(markationStockRangeComposite[1])
+        # print(markationStockRangeComposite[0][0])
+        # print(markationStockRangeComposite[16][0])
+
+        # print(len(observanceObjectResultsComposite))
+
+
 
 
 
