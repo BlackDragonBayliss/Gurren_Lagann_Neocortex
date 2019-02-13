@@ -29,8 +29,29 @@
 #     index += 1
 #
 # print(testList)
-from OperationCenter import OperationCenter
 
-operationCenter = OperationCenter()
-    # operation_center.process_main_process_loop()
-operationCenter.getNodeInformation(0)
+# from OperationCenter import OperationCenter
+#
+# operationCenter = OperationCenter()
+#     # operation_center.process_main_process_loop()
+# operationCenter.getNodeInformation(0)
+
+# from datetime import datetime
+#
+# x = datetime.now()
+#
+# print(x.year)
+# print(x.month)
+# print(x.day)
+# print(x.strftime("%Y-%m-%d %H:%M:%S"))
+
+from TimeManager import TimeManager
+
+tm = TimeManager()
+
+print(tm.getCurrentDateObjectList())
+
+
+# >>> from time import gmtime, strftime
+# strftime("%Y-%m-%d %H:%M:%S", gmtime())
+# '2009-01-05 22:14:39'

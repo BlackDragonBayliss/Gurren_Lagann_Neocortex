@@ -23,6 +23,14 @@ class TimeManager:
         epoch_time = calendar.timegm(time.gmtime())
         return epoch_time
 
+    def getCurrentDateObjectList(self):
+        date = datetime.datetime.now()
+        # print(x.year)
+        # print(x.month)
+        # print(x.day)
+        dateObjectList = [date.year, date.month, date.day]
+        return dateObjectList
+
     def convertEpochToTime(self, epochInput):
         timeResult = time.strftime('%d.%m.%Y %H:%M:%S', time.localtime(epochInput))
         return timeResult
@@ -31,6 +39,7 @@ class TimeManager:
         pattern = '%d.%m.%Y %H:%M:%S'
         epoch = int(time.mktime(time.strptime(dateTime, pattern)))
         return epoch
+
 
     def isStockWithinTradingTimeBound(self, stock):
         if(int(stock["hour_created"]) >= 14):
