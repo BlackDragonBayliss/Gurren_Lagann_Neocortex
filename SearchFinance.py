@@ -10,10 +10,10 @@ from time import sleep
 def parse(ticker):
     url = "http://finance.yahoo.com/quote/%s?p=%s" % (ticker, ticker)
     response = requests.get(url, verify=False)
-    print("Parsing %s" % (url))
+    # print("Parsing %s" % (url))
     sleep(2)
     parser = html.fromstring(response.text)
-    print(response.text)
+    # print(response.text)
     summary_table = parser.xpath('//div[contains(@data-test,"summary-table")]//tr')
     summary_data = OrderedDict()
     other_details_json_link = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/{0}?formatted=true&lang=en-US&region=US&modules=summaryProfile%2CfinancialData%2CrecommendationTrend%2CupgradeDowngradeHistory%2Cearnings%2CdefaultKeyStatistics%2CcalendarEvents&corsDomain=finance.yahoo.com".format(
@@ -34,7 +34,7 @@ def parse(ticker):
         for table_data in summary_table:
             raw_table_key = table_data.xpath('.//td[contains(@class,"C(black)")]//text()')
             raw_table_value = table_data.xpath('.//td[contains(@class,"Ta(end)")]//text()')
-            # print(raw_table_key)
+            print(raw_table_key)
             table_key = ''.join(raw_table_key).strip()
             table_value = ''.join(raw_table_value).strip()
             summary_data.update({table_key: table_value})
