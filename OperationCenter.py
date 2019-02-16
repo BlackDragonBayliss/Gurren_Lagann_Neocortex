@@ -37,16 +37,12 @@ class OperationCenter:
 
         if (caseCalculationType == 0):
             for stockEntryTotalities in stockEntryTotalitiesList:
-                dataDisplayer = DataDisplayer()
                 fullRangeStockList = self.dynamicTimeMarkationManager.calculateFullRangeList(stockEntryTotalities)
-                dataDisplayer.testCase3(fullRangeStockList)
-                break
+                observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
+                observanceObjectResultsComposite.append(observanceObjectResult)
 
-            #     observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
-            #     observanceObjectResultsComposite.append(observanceObjectResult)
-            #
-            # for observanceObjectResult in observanceObjectResultsComposite:
-            #     print(observanceObjectResult.getScenarioOutcome())
+            for observanceObjectResult in observanceObjectResultsComposite:
+                print(observanceObjectResult.getScenarioOutcome())
 
         if (caseCalculationType == 1):
             for stockEntryTotalities in stockEntryTotalitiesList:
@@ -58,10 +54,15 @@ class OperationCenter:
                 for observanceObject in observanceObjectResultsList:
                     print(observanceObject.getScenarioOutcome())
 
-        # print(len(markationStockRangeComposite))
-        # print(markationStockRangeComposite[1])
-        # print(markationStockRangeComposite[0][0])
-        # print(markationStockRangeComposite[16][0])
+        if (caseCalculationType == 3):
+            for stockEntryTotalities in stockEntryTotalitiesList:
+                markationStockRangeComposite = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalities)
+                observanceObjectResults = scenarioManager.calculateMarkationResults(markationStockRangeComposite)
+                observanceObjectResultsComposite.append(observanceObjectResults)
+
+            for observanceObjectResultsList in observanceObjectResultsComposite:
+                for observanceObject in observanceObjectResultsList:
+                    print(observanceObject.getScenarioOutcome())
 
         # print(len(observanceObjectResultsComposite))
 

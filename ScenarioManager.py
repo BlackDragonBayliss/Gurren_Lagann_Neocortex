@@ -7,21 +7,17 @@ class ScenarioManager:
         self.chosen_stock_temp_container = []
 
     def calculateFullRangeResults(self, fullRangeSet):
-        # results = []
         observanceObject = ObservanceObject()
         observanceObject.setFullRangeSet(fullRangeSet)
-        # print(fullRangeSet[(len(fullRangeSet)-1)])
         observanceObject.setBoughtBidPrice(fullRangeSet[(len(fullRangeSet) - 1)]["bid"])
         observanceObject.setHighDelimiter(.01)
         observanceObject.setLowDelimiter(.05)
 
         self.calculateWinOrLoseFullRange(observanceObject)
-        # results.append(observanceObject)
         return observanceObject
 
     def calculateMarkationResults(self, markationList):
         markationResults = []
-        # print(markationList)
         for markationSet in markationList:
             observanceObject = ObservanceObject()
             observanceObject.setMarkationSet(markationSet)
@@ -32,6 +28,28 @@ class ScenarioManager:
             self.calculateWinOrLoseMarkation(observanceObject)
             markationResults.append(observanceObject)
         return markationResults
+
+    def calculateFullRangeMarkationResults(self, markationList):
+        markationResults = []
+        for markationSet in markationList:
+            observanceObject = ObservanceObject()
+            observanceObject.setMarkationSet(markationSet)
+            observanceObject.setBoughtBidPrice(markationSet[0]["bid"])
+            observanceObject.setHighDelimiter(.01)
+            observanceObject.setLowDelimiter(.05)
+
+            self.calculateWinOrLoseMarkation(observanceObject)
+            markationResults.append(observanceObject)
+        return markationResults
+
+
+
+
+
+
+
+
+
 
     def calculateWinOrLoseFullRange(self, observanceObject):
         fullRangeSet = observanceObject.getFullRangeSet()
