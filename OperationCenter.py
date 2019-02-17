@@ -54,15 +54,22 @@ class OperationCenter:
                 for observanceObject in observanceObjectResultsList:
                     print(observanceObject.getScenarioOutcome())
 
-        if (caseCalculationType == 3):
+        if (caseCalculationType == 2):
             for stockEntryTotalities in stockEntryTotalitiesList:
-                markationStockRangeComposite = self.dynamicTimeMarkationManager.calculateLooseMarkationList(stockEntryTotalities)
-                observanceObjectResults = scenarioManager.calculateMarkationResults(markationStockRangeComposite)
-                observanceObjectResultsComposite.append(observanceObjectResults)
+                fullRangeStockList = self.dynamicTimeMarkationManager.calculateFullRangeList(stockEntryTotalities)
+                # observanceObjectResults = scenarioManager.calculateMarkationResults(markationStockRangeComposite)
+                # print(fullRangeStockList[(len(fullRangeStockList)-1)])
+                # print(scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList))
+                chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
+                scenarioManager.calculateStockTenMinuteIterate(fullRangeStockList,chronDict)
 
-            for observanceObjectResultsList in observanceObjectResultsComposite:
-                for observanceObject in observanceObjectResultsList:
-                    print(observanceObject.getScenarioOutcome())
+
+                # observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
+                # observanceObjectResultsComposite.append(observanceObjectResults)
+
+            # for observanceObjectResultsList in observanceObjectResultsComposite:
+                # for observanceObject in observanceObjectResultsList:
+                #     print(observanceObject.getScenarioOutcome())
 
         # print(len(observanceObjectResultsComposite))
 

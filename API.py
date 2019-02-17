@@ -12,7 +12,7 @@ def __new__(self):
 def init_system():
     operationCenter = OperationCenter()
     # operation_center.process_main_process_loop()
-    operationCenter.getNodeInformation(0)
+    operationCenter.getNodeInformation(2)
     return "initiated"
 
 @app.route('/recordQueries', methods=['POST'])
