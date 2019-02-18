@@ -63,12 +63,12 @@ class ScenarioManager:
             index += 1
 
     def calculateStockTenMinuteIterate(self, stockList, chronDict):
-        # From start interate every 10 minutes
-        #for chronDict locations locate 10 minute markation end,
         beginWatchListResult = chronDict["chronBeginWatch"]
         endWatchListResult = chronDict["chronEndWatch"]
 
-        calculateFullRangeMarkationList(stockList,beginWatchListResult[])
+        calculateFullRangeMarkationList(stockList, beginWatchListResult[])
+
+
         # markationComposite = []
         # markationContainer = []
 
@@ -97,7 +97,6 @@ class ScenarioManager:
         initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
                                         int(initialStock["minute_created"]), int(initialStock["second_created"]))
         nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-
         for stock in stockList[::-1]:
             createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
                                             int(stock["second_created"]))
