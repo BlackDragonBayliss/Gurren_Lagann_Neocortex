@@ -59,7 +59,6 @@ class DataDisplayer:
         # print(x)
         # print(x[0:50])
         # print(y[0:50])
-        # plotting the points
         plt.plot(x[0:100], y[0:100], color='blue', linestyle='dashed', linewidth=3,
                  marker='o', markerfacecolor='black', markersize=5)
 

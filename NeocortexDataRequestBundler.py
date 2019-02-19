@@ -22,11 +22,6 @@ class NeocortexDataRequestBundler:
         self.isFiveMinuteChangeoverValue = 0
         self.isStockStoreValue = 1
 
-    # def setup_data_manager_request_bundler(self, sym, operation_center, time_data_set_manager):
-    #     self.sym = sym
-    #     self.operation_center = operation_center
-    #     self.time_data_set_manager = time_data_set_manager
-
     def process_stock_store(self, stock):
         print("hit process_stock_store")
         if (self.is_data_bundle_initialization_required):

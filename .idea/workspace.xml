@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScenarioManager.py" afterPath="$PROJECT_DIR$/ScenarioManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataDisplayer.py" afterPath="$PROJECT_DIR$/DataDisplayer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeocortexDataRequestBundler.py" afterPath="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="99" column="30" lean-forward="false" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+            <state relative-caret-position="-649">
+              <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="218" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -68,8 +70,18 @@
       <file leaf-file-name="DataFilterManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
+            <state relative-caret-position="825">
               <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="63" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataDisplayer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataDisplayer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -78,21 +90,11 @@
       <file leaf-file-name="NeocortexDataRequestBundler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="-172">
+              <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScenarioFactory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ScenarioFactory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -163,17 +165,17 @@
         <option value="$PROJECT_DIR$/Scenario.py" />
         <option value="$PROJECT_DIR$/DataFilterManager.py" />
         <option value="$PROJECT_DIR$/ObservanceObject.py" />
-        <option value="$PROJECT_DIR$/DataDisplayer.py" />
         <option value="$PROJECT_DIR$/GoldenBearDeterminer.py" />
         <option value="$PROJECT_DIR$/TimeManager.py" />
         <option value="$PROJECT_DIR$/testing.py" />
-        <option value="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
         <option value="$PROJECT_DIR$/DowScraper.py" />
         <option value="$PROJECT_DIR$/SearchFinance.py" />
         <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
         <option value="$PROJECT_DIR$/API.py" />
         <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
+        <option value="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
+        <option value="$PROJECT_DIR$/DataDisplayer.py" />
       </list>
     </option>
   </component>
@@ -383,13 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataDisplayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LearningController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -478,16 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -495,14 +480,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="63" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,10 +499,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="99" column="30" lean-forward="false" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+        <state relative-caret-position="-649">
+          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="218" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="63" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataDisplayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding />
         </state>
       </provider>
