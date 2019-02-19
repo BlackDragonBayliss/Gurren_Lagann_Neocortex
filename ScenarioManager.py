@@ -43,7 +43,7 @@ class ScenarioManager:
             markationResults.append(observanceObject)
         return markationResults
 
-
+    ##
 
     def stockChronologicalLocationIdentifier(self, stockList):
         # Chron [stock, index]
@@ -62,62 +62,44 @@ class ScenarioManager:
                     return [stock,index]
             index += 1
 
-    def calculateStockTenMinuteIterate(self, stockList, chronDict):
+    ##return stock and index of desired markation [stock,index]
+
+    def calculateFullRangeMarkationList(self, stockList, chronDict):
         beginWatchListResult = chronDict["chronBeginWatch"]
         endWatchListResult = chronDict["chronEndWatch"]
 
-        calculateFullRangeMarkationList(stockList, beginWatchListResult[])
-
-
-        # markationComposite = []
-        # markationContainer = []
-
-        # index = 0
-        # for stock in stockList:
-        #     if(index >= 419):
-        #
-        #         # if(stock.):
-        #         # markationContainer.append(stock)
-        #         #
-        #         # if(stock["hour_created"] == endWatchListResult[0]["hour_created"]):
-        #         #     print("EndStock")
-        #         #     print(stock["hour_created"])
-        #         #     break
-        #     index += 1
-
-
-    def calculateFullRangeMarkationList(self, stockList, initialStock):
         timeManager = TimeManager()
         index = 0
-        initialStock = initialStock
-        stockRangeComposite = []
-        stockRangeContainer = []
-        stockRangeComposite.append(stockRangeContainer)
-
-        initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
-                                        int(initialStock["minute_created"]), int(initialStock["second_created"]))
-        nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        for stock in stockList:
-            createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
-                                            int(stock["second_created"]))
-
-            if (timeManager.isStockWithinTradingTimeBound(stock) == False):
-                break
-
-            if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-                self.isStockRangeContainerChangeOver = False
-                stockRangeContainer = []
-                stockRangeComposite.append(stockRangeContainer)
-
-            if (
-                    createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
-                nextStockDateTime += timedelta(minutes=30)
-                self.isStockRangeContainerChangeOver = True
-
-            stockRangeContainer.append(stock)
-            index += 1
-        markationList = []
-        return markationList
+        initialStock = beginWatchListResult[0]
+        print("begin watch sanity: "+ initialStock)
+        # stockRangeComposite = []
+        # stockRangeContainer = []
+        # stockRangeComposite.append(stockRangeContainer)
+        #
+        # initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
+        #                                 int(initialStock["minute_created"]), int(initialStock["second_created"]))
+        # nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
+        # for stock in stockList:
+        #     createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
+        #                                     int(stock["second_created"]))
+        #
+        #     if (timeManager.isStockWithinTradingTimeBound(stock) == False):
+        #         break
+        #
+        #     if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
+        #         self.isStockRangeContainerChangeOver = False
+        #         stockRangeContainer = []
+        #         stockRangeComposite.append(stockRangeContainer)
+        #
+        #     if (
+        #             createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
+        #         nextStockDateTime += timedelta(minutes=30)
+        #         self.isStockRangeContainerChangeOver = True
+        #
+        #     stockRangeContainer.append(stock)
+        #     index += 1
+        # markationList = []
+        # return markationList
 
 
 

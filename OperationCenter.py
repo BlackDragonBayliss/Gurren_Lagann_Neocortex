@@ -60,8 +60,9 @@ class OperationCenter:
                 # observanceObjectResults = scenarioManager.calculateMarkationResults(markationStockRangeComposite)
                 # print(fullRangeStockList[(len(fullRangeStockList)-1)])
                 # print(scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList))
+
                 chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
-                scenarioManager.calculateStockTenMinuteIterate(fullRangeStockList,chronDict)
+                scenarioManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict)
 
 
                 # observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
