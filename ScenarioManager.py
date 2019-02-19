@@ -97,7 +97,7 @@ class ScenarioManager:
         initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
                                         int(initialStock["minute_created"]), int(initialStock["second_created"]))
         nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        for stock in stockList[::-1]:
+        for stock in stockList:
             createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
                                             int(stock["second_created"]))
 
