@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" afterPath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScenarioManager.py" afterPath="$PROJECT_DIR$/ScenarioManager.py" />
     </list>
@@ -39,28 +40,42 @@
       <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="243">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="-990">
+              <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+      <file leaf-file-name="TimeManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TimeManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="144" selection-end-column="28" />
+            <state relative-caret-position="0">
+              <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -98,16 +113,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scenario.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scenario.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NodeRequester.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NodeRequester.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,12 +143,14 @@
       <find>json_loaded_summary</find>
       <find>summary_table</find>
       <find>determineDynamicTimeInterval</find>
-      <find>calculateFullRangeList</find>
       <find>calculateStockIndexToMarkate</find>
       <find>stockChronologicalLocationIdentifier</find>
       <find>calculateStockTenMinuteIterate</find>
-      <find>beginWatchListResult</find>
+      <find>calculateFullRangeList</find>
+      <find>calculateFullRangeMarkationList</find>
       <find>calculateLooseMarkationList</find>
+      <find>beginWatchListResult</find>
+      <find>chronBeginWatch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,12 +179,12 @@
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/DowScraper.py" />
         <option value="$PROJECT_DIR$/SearchFinance.py" />
-        <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
         <option value="$PROJECT_DIR$/API.py" />
         <option value="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
         <option value="$PROJECT_DIR$/DataDisplayer.py" />
-        <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
+        <option value="$PROJECT_DIR$/OperationCenter.py" />
+        <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
       </list>
     </option>
   </component>
@@ -250,7 +257,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -259,7 +265,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26602176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3675937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -403,14 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TimeManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DowScraper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -475,14 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="144" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-172">
@@ -519,18 +509,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TimeManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OperationCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="47" column="41" lean-forward="true" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="243">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="-990">
+          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
           <folding />
         </state>
       </provider>

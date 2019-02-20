@@ -1,4 +1,5 @@
 from ObservanceObject import ObservanceObject
+from TimeManager import TimeManager
 
 
 class ScenarioManager:
@@ -64,42 +65,6 @@ class ScenarioManager:
 
     ##return stock and index of desired markation [stock,index]
 
-    def calculateFullRangeMarkationList(self, stockList, chronDict):
-        beginWatchListResult = chronDict["chronBeginWatch"]
-        endWatchListResult = chronDict["chronEndWatch"]
-
-        timeManager = TimeManager()
-        index = 0
-        initialStock = beginWatchListResult[0]
-        print("begin watch sanity: "+ initialStock)
-        # stockRangeComposite = []
-        # stockRangeContainer = []
-        # stockRangeComposite.append(stockRangeContainer)
-        #
-        # initialStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
-        #                                 int(initialStock["minute_created"]), int(initialStock["second_created"]))
-        # nextStockDateTime = initialStockDateTime + timedelta(minutes=30)
-        # for stock in stockList:
-        #     createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
-        #                                     int(stock["second_created"]))
-        #
-        #     if (timeManager.isStockWithinTradingTimeBound(stock) == False):
-        #         break
-        #
-        #     if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-        #         self.isStockRangeContainerChangeOver = False
-        #         stockRangeContainer = []
-        #         stockRangeComposite.append(stockRangeContainer)
-        #
-        #     if (
-        #             createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
-        #         nextStockDateTime += timedelta(minutes=30)
-        #         self.isStockRangeContainerChangeOver = True
-        #
-        #     stockRangeContainer.append(stock)
-        #     index += 1
-        # markationList = []
-        # return markationList
 
 
 

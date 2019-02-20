@@ -5,6 +5,7 @@ from DataFilterManager import DataFilterManager
 from DynamicTimeMarkationManager import DynamicTimeMarkationManager
 from ScenarioManager import ScenarioManager
 from DataDisplayer import DataDisplayer
+from TimeManager import TimeManager
 
 class OperationCenter:
     def __init__(self):
@@ -13,6 +14,7 @@ class OperationCenter:
         self.nodeRequester = NodeRequester()
         self.dataFilterManager = DataFilterManager()
         self.dynamicTimeMarkationManager = DynamicTimeMarkationManager()
+        self.timeManager = TimeManager()
 
     def process_main_process_loop(self):
         self.main_process_loop()
@@ -62,8 +64,21 @@ class OperationCenter:
                 # print(scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList))
 
                 chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
-                scenarioManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict)
+                markationComposite = self.dynamicTimeMarkationManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict, self.timeManager)
 
+                # print(len(markationComposite))
+                # print(len(markationComposite[23]))
+
+                # for markationRange in markationComposite:
+                #     print(str(markationRange[0]["symbol"]))
+
+
+                #     # print(len(markationRange))
+                #     pass
+
+                    # index = 0
+                    # for stock in markationRange:
+                    #     if
 
                 # observanceObjectResult = scenarioManager.calculateFullRangeResults(fullRangeStockList)
                 # observanceObjectResultsComposite.append(observanceObjectResults)
