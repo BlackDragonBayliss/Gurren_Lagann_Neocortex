@@ -155,7 +155,6 @@ class DynamicTimeMarkationManager:
         # timeManager = timerManager
         index = 0
         initialStock = beginWatchListResult[0]
-        # print("begin watch sanity: " + str(initialStock))
 
         stockRangeComposite = []
         stockRangeContainer = []
@@ -163,63 +162,95 @@ class DynamicTimeMarkationManager:
 
         beginIterationStockDateTime = datetime(2012, 9, 16, int(initialStock["hour_created"]),
                                         int(initialStock["minute_created"]), int(initialStock["second_created"]))
-        # print(initialStockDateTime.minute)
-        # nextStockDateTime = beginIterationStockDateTime + timedelta(minutes=desiredTimeInterval)
 
         tenMinuteSetComposite = []
         tenMinuteSet = []
-        # entryComposite.append(tenMinuteSet)
-        # print(str(stockList[0]["minute_created"]) + " hour: "+ str(stockList[0]["hour_created"]))
-        #
-        # lastIndexMinute = str(stockList[(len(stockList)-1)]["minute_created"])
-        # print(lastIndexMinute)
-        # lastIndexHour = str(stockList[(len(stockList) - 1)]["hour_created"])
-        # print(lastIndexHour)
-        # print(str(stockList[len(stockList-1)]["minute_created"]) +
-        #       " hour: " + str(stockList[len(stockList-1)]["hour_created"]))
-
-
-        # for tenMinuteSet in tenMinuteSetComposite:
         for stock in stockList:
             createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
                                             int(stock["second_created"]))
-            # print("createdStockDateTime.minute: "+str(createdStockDateTime.minute) +
-            # " beginIterationStockDateTime.minute: "+ str(beginIterationStockDateTime.minute)+
-            # " self.isStockRangeContainerChangeOver: " +str(self.isStockRangeContainerChangeOver))
-
             if(createdStockDateTime.minute == beginIterationStockDateTime.minute and self.isStockRangeContainerChangeOver):
-                print("adding entryList")
-                tenMinuteSetComposite.append([createdStockDateTime])
+                tenMinuteSetComposite.append([createdStockDateTime,stock,index])
                 self.isStockRangeContainerChangeOver = False
 
             if (createdStockDateTime.minute != beginIterationStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
-                print("self.isStockRangeContainerChangeOver "+str(self.isStockRangeContainerChangeOver))
-                # nextStockDateTime += timedelta(minutes=desiredTimeInterval)
-                print("beginIterationStockDateTime "+ str(beginIterationStockDateTime))
+                # print("self.isStockRangeContainerChangeOver "+str(self.isStockRangeContainerChangeOver))
+                # print("beginIterationStockDateTime "+ str(beginIterationStockDateTime))
                 beginIterationStockDateTime = beginIterationStockDateTime + timedelta(minutes=desiredTimeInterval)
-                # print("internal minute mile: "+ str(beginIterationStockDateTime))
                 self.isStockRangeContainerChangeOver = True
+            index += 1
+
+        # print(len(tenMinuteSetComposite))
 
 
-
-
-
-            # if(len(tenMinuteSetComposite) >=50):
-            #     print("breaking")
-            #     break
-
-
-        print(len(tenMinuteSetComposite))
         # halfEntryCompositeLength = int(len(entryComposite) / 2)
         # # print(halfEntryCompositeLength)
         # newEntryComposite = entryComposite[0:halfEntryCompositeLength]
         # print(len(newEntryComposite))
         # print(newEntryComposite)
 
+        # for tenMinuteSet in tenMinuteSetComposite:
+        # indexStockTenMinuteSet = 0
+
+        # currentTenMinuteSet = tenMinuteSetComposite[0]
+        stockRangeContainerTenMinuteSetComposite = []
+        stockRangeContainerTenMinuteSet = []
+        # print(currentTenMinuteSet[2])
+
+        for currentTenMinuteSet in tenMinuteSetComposite:
+            indexStockTenMinuteSet = 0
+            currentTenMinuteSetStockCreationIndex = currentTenMinuteSet[2]
+            # print(currentTenMinuteSetStockCreationIndex)
+            # print(stockList[0]["minute_created"])
+            # print(len(stockList))
+            for stock in stockList:
+                if(indexStockTenMinuteSet == 0):
+                    print("conditional index outside is: " + str(currentTenMinuteSetStockCreationIndex))
+                if(indexStockTenMinuteSet >= currentTenMinuteSetStockCreationIndex):
+                    # print("current index inside is: "+str(indexStockTenMinuteSet))
+                    # print("tenMinuteSet for: " + str(tenMinuteSet[0].minute)+ " stock: " + tenMinuteSet[1]["symbol"])
+
+                    # if (timeManager.isStockWithinTradingTimeBound(stock) == False):
+                    #     break
+                    #     #
+                    # if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
+                    #     self.isStockRangeContainerChangeOver = False
+                    #     stockRangeContainer = []
+                    #     stockRangeComposite.append(stockRangeContainer)
+                    #     #
+                    # if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
+                    #     nextStockDateTime += timedelta(minutes=desiredTimeInterval)
+                    #     self.isStockRangeContainerChangeOver = True
+
+                    stockRangeContainerTenMinuteSet.append(stock)
+                indexStockTenMinuteSet += 1
+            stockRangeContainerTenMinuteSetComposite.append(stockRangeContainerTenMinuteSet)
+            stockRangeContainerTenMinuteSet = []
+
+            # print(str(stockRangeContainerTenMinuteSet[0]["minute_created"]))
+            # print(str(stockRangeContainerTenMinuteSet[59]["minute_created"]))
+
+            # print(len(stockRangeContainerTenMinuteSetComposite))
+
+        tenMinuteSetTestIndex = 0
+        for tenMinuteSet in stockRangeContainerTenMinuteSetComposite:
+            print("len(tenMinuteSet): "+ str(len(tenMinuteSet)))
+            tenMinuteSetTestIndex += 1
+
+            # print("stockList first base-line entry, minute: "+ stockList[0].minute + " hour: "+ stockList[0].hour)
+            # print("stockList last base-line entry, minute: " + stockList[1464].minute + " hour: " + stockList[1464].hour)
+            #
+            # print("First entry composite minute_created: " + str(stockRangeContainerTenMinuteSetComposite[0][0]["minute_created"]))
+            # print("First entry composite hour_created: " + str(
+            #     stockRangeContainerTenMinuteSetComposite[0][0]["hour_created"]))
+            #
+            # print("Last entry composite minute_created: " + str(
+            #     stockRangeContainerTenMinuteSetComposite[23][0]["minute_created"]))
+            # print("Last entry composite hour_created: " + str(
+            #     stockRangeContainerTenMinuteSetComposite[23][0]["hour_created"]))
 
 
-        # for entryList in newEntryComposite:
-            # print("Second for: " + str(entryList[0].minute))
+
+
 
         # print(newEntryComposite)
         # for entryList in entryComposite:
@@ -228,20 +259,21 @@ class DynamicTimeMarkationManager:
         # for stock in stockList:
         #     createdStockDateTime = datetime(2012, 9, 16, int(stock["hour_created"]), int(stock["minute_created"]),
         #                                     int(stock["second_created"]))
-        # # Catch if stock is ever out of trading hours
-        #     if (timeManager.isStockWithinTradingTimeBound(stock) == False):
-        #         break
-        # #
-        #     if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-        #         self.isStockRangeContainerChangeOver = False
-        #         stockRangeContainer = []
-        #         stockRangeComposite.append(stockRangeContainer)
-        # #
-        #     if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
-        #         nextStockDateTime += timedelta(minutes=desiredTimeInterval)
-        #         self.isStockRangeContainerChangeOver = True
-        #
-        #     stockRangeContainer.append(stock)
+        # Catch if stock is ever out of trading hours
+    #     if()
+    #     if (timeManager.isStockWithinTradingTimeBound(stock) == False):
+    #         break
+    # #
+    #     if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
+    #         self.isStockRangeContainerChangeOver = False
+    #         stockRangeContainer = []
+    #         stockRangeComposite.append(stockRangeContainer)
+    # #
+    #     if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
+    #         nextStockDateTime += timedelta(minutes=desiredTimeInterval)
+    #         self.isStockRangeContainerChangeOver = True
+
+        # stockRangeContainer.append(stock)
         #     index += 1
         return stockRangeComposite
 
