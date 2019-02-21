@@ -199,28 +199,10 @@ class DynamicTimeMarkationManager:
         for currentTenMinuteSet in tenMinuteSetComposite:
             indexStockTenMinuteSet = 0
             currentTenMinuteSetStockCreationIndex = currentTenMinuteSet[2]
-            # print(currentTenMinuteSetStockCreationIndex)
-            # print(stockList[0]["minute_created"])
-            # print(len(stockList))
             for stock in stockList:
                 if(indexStockTenMinuteSet == 0):
                     print("conditional index outside is: " + str(currentTenMinuteSetStockCreationIndex))
                 if(indexStockTenMinuteSet >= currentTenMinuteSetStockCreationIndex):
-                    # print("current index inside is: "+str(indexStockTenMinuteSet))
-                    # print("tenMinuteSet for: " + str(tenMinuteSet[0].minute)+ " stock: " + tenMinuteSet[1]["symbol"])
-
-                    # if (timeManager.isStockWithinTradingTimeBound(stock) == False):
-                    #     break
-                    #     #
-                    # if (createdStockDateTime.minute == nextStockDateTime.minute and self.isStockRangeContainerChangeOver):
-                    #     self.isStockRangeContainerChangeOver = False
-                    #     stockRangeContainer = []
-                    #     stockRangeComposite.append(stockRangeContainer)
-                    #     #
-                    # if (createdStockDateTime.minute != nextStockDateTime.minute and self.isStockRangeContainerChangeOver == False):
-                    #     nextStockDateTime += timedelta(minutes=desiredTimeInterval)
-                    #     self.isStockRangeContainerChangeOver = True
-
                     stockRangeContainerTenMinuteSet.append(stock)
                 indexStockTenMinuteSet += 1
             stockRangeContainerTenMinuteSetComposite.append(stockRangeContainerTenMinuteSet)
