@@ -29,7 +29,8 @@ class OperationCenter:
 
     def getNodeInformation(self, caseCalculationType):
         scenarioManager = ScenarioManager()
-        response = self.nodeRequester.getAllRecordSets("02/08/2019")
+        # response = self.nodeRequester.getAllRecordSets("02/08/2019")
+        response = self.nodeRequester.getAllRecordSets("02/21/2019")
         dayList = self.dataFilterManager.createListOfDaylists(response)
         observanceObjectResultsComposite = []
         stockEntryTotalitiesList = []
@@ -57,11 +58,24 @@ class OperationCenter:
                     print(observanceObject.getScenarioOutcome())
 
         if (caseCalculationType == 2):
+            currentTestIndex = 0
             for stockEntryTotalities in stockEntryTotalitiesList:
-                fullRangeStockList = self.dynamicTimeMarkationManager.calculateFullRangeList(stockEntryTotalities)
+                if (currentTestIndex == 0):
+                    print("Internal Index: "+ str(currentTestIndex))
+                    fullRangeStockList = self.dynamicTimeMarkationManager.calculateFullRangeList(stockEntryTotalities)
+                    # print("first index: "+str(fullRangeStockList[0]))
+                    # print("last index: "+ str(fullRangeStockList[(len(fullRangeStockList)-1)]))
 
-                chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
-                stockRangeContainerTenMinuteSetComposite = self.dynamicTimeMarkationManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict, self.timeManager)
+
+                    chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
+                    stockRangeContainerTenMinuteSetComposite = self.dynamicTimeMarkationManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict, self.timeManager)
+                    for tenMinuteSet in stockRangeContainerTenMinuteSetComposite:
+                        print(tenMinuteSet[0]["symbol"])
+                    currentTestIndex += 1
 
                 observanceObjectResults = scenarioManager.calculateFullRangeMarkationResults(stockRangeContainerTenMinuteSetComposite)
                 observanceObjectResultsComposite.append(observanceObjectResults)
+                # print(observanceObjectResultsComposite)
+            for observanceObjectResults in observanceObjectResultsComposite[0]:
+                print(observanceObjectResults.getScenarioOutcome())
+
