@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScenarioManager.py" afterPath="$PROJECT_DIR$/ScenarioManager.py" />
-    </list>
+    <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,26 +11,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="API.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API.py">
+      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="359">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+      <file leaf-file-name="DynamaTransit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamaDreamMatrix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamaDreamMatrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamaPredictionCortex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamaNeuralNet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamaNeuralNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamaMemoryCortex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamaMemoryCortex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,8 +88,8 @@
       <file leaf-file-name="ObservanceObject.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObservanceObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="26" />
+            <state relative-caret-position="960">
+              <caret line="64" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -70,36 +105,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TimeManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="31" lean-forward="true" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataFilterManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataFilterManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="63" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataDisplayer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataDisplayer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NeocortexDataRequestBundler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,16 +113,6 @@
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeRequester.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NodeRequester.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,6 +182,12 @@
         <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
         <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
+        <option value="$PROJECT_DIR$/DynamaDreamMatrix.py" />
+        <option value="$PROJECT_DIR$/DynamaPredictionCortex.py" />
+        <option value="$PROJECT_DIR$/DynamaNeuralNet.py" />
+        <option value="$PROJECT_DIR$/DynamaMemmoryCortex.py" />
+        <option value="$PROJECT_DIR$/DynamaMemoryCortex.py" />
+        <option value="$PROJECT_DIR$/DynamaTransit.py" />
       </list>
     </option>
   </component>
@@ -377,6 +378,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#14#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,10 +524,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ObservanceObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="26" />
+        <state relative-caret-position="960">
+          <caret line="64" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -538,13 +552,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+    <entry file="file://$PROJECT_DIR$/DynamaDreamMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaNeuralNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaMemoryCortex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
