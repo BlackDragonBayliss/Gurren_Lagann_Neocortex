@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" afterPath="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="68" column="133" lean-forward="false" selection-start-line="68" selection-start-column="133" selection-end-line="68" selection-end-column="133" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -50,8 +51,8 @@
       <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-990">
-              <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+            <state relative-caret-position="240">
+              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="42" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -59,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="212" column="62" lean-forward="false" selection-start-line="212" selection-start-column="62" selection-end-line="212" selection-end-column="62" />
+            <state relative-caret-position="1057">
+              <caret line="241" column="55" lean-forward="false" selection-start-line="241" selection-start-column="15" selection-end-line="241" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -134,7 +135,6 @@
     <findStrings>
       <find>isStockWithinTradingTimeBound</find>
       <find>generateStockEntryTotalities</find>
-      <find>calculateMarkationResults</find>
       <find>stockEntryTotalitiesList</find>
       <find>calculateFullRangeResults</find>
       <find>summary_json_response</find>
@@ -146,9 +146,10 @@
       <find>calculateStockTenMinuteIterate</find>
       <find>calculateFullRangeList</find>
       <find>calculateFullRangeMarkationList</find>
-      <find>calculateLooseMarkationList</find>
       <find>beginWatchListResult</find>
       <find>chronBeginWatch</find>
+      <find>calculateLooseMarkationList</find>
+      <find>calculateMarkationResults</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,8 +182,8 @@
         <option value="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
         <option value="$PROJECT_DIR$/DataDisplayer.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
-        <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
+        <option value="$PROJECT_DIR$/OperationCenter.py" />
       </list>
     </option>
   </component>
@@ -516,31 +517,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1057">
+          <caret line="241" column="55" lean-forward="false" selection-start-line="241" selection-start-column="15" selection-end-line="241" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-990">
-          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="42" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
+    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="212" column="62" lean-forward="false" selection-start-line="212" selection-start-column="62" selection-end-line="212" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="223">
+          <caret line="68" column="133" lean-forward="false" selection-start-line="68" selection-start-column="133" selection-end-line="68" selection-end-column="133" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

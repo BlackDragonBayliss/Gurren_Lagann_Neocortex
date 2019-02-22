@@ -64,7 +64,10 @@ class OperationCenter:
                 # print(scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList))
 
                 chronDict = scenarioManager.stockChronologicalLocationIdentifier(fullRangeStockList)
-                markationComposite = self.dynamicTimeMarkationManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict, self.timeManager)
+                stockRangeContainerTenMinuteSetComposite = self.dynamicTimeMarkationManager.calculateFullRangeMarkationList(fullRangeStockList, chronDict, self.timeManager)
+
+                observanceObjectResults = scenarioManager.calculateFullRangeMarkationResults(stockRangeContainerTenMinuteSetComposite)
+                observanceObjectResultsComposite.append(observanceObjectResults)
 
                 # print(len(markationComposite))
                 # print(len(markationComposite[23]))

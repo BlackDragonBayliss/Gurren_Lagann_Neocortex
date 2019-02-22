@@ -239,7 +239,7 @@ class DynamicTimeMarkationManager:
 
         # stockRangeContainer.append(stock)
         #     index += 1
-        return stockRangeComposite
+        return stockRangeContainerTenMinuteSetComposite
 
     def clearEmptyStockRangeContainerFromComposite(self, stockRangeComposite):
         index = 0
