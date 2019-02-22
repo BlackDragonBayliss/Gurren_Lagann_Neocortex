@@ -179,22 +179,9 @@ class DynamicTimeMarkationManager:
                 self.isStockRangeContainerChangeOver = True
             index += 1
 
-        # print(len(tenMinuteSetComposite))
 
-
-        # halfEntryCompositeLength = int(len(entryComposite) / 2)
-        # # print(halfEntryCompositeLength)
-        # newEntryComposite = entryComposite[0:halfEntryCompositeLength]
-        # print(len(newEntryComposite))
-        # print(newEntryComposite)
-
-        # for tenMinuteSet in tenMinuteSetComposite:
-        # indexStockTenMinuteSet = 0
-
-        # currentTenMinuteSet = tenMinuteSetComposite[0]
         stockRangeContainerTenMinuteSetComposite = []
         stockRangeContainerTenMinuteSet = []
-        # print(currentTenMinuteSet[2])
 
         for currentTenMinuteSet in tenMinuteSetComposite:
             indexStockTenMinuteSet = 0
@@ -207,11 +194,6 @@ class DynamicTimeMarkationManager:
                 indexStockTenMinuteSet += 1
             stockRangeContainerTenMinuteSetComposite.append(stockRangeContainerTenMinuteSet)
             stockRangeContainerTenMinuteSet = []
-
-            # print(str(stockRangeContainerTenMinuteSet[0]["minute_created"]))
-            # print(str(stockRangeContainerTenMinuteSet[59]["minute_created"]))
-
-            # print(len(stockRangeContainerTenMinuteSetComposite))
 
         tenMinuteSetTestIndex = 0
         for tenMinuteSet in stockRangeContainerTenMinuteSetComposite:
