@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="" />
+    <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamaTransit.py" afterPath="$PROJECT_DIR$/DynamaTransit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoldenBearDeterminer.py" afterPath="$PROJECT_DIR$/GoldenBearDeterminer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +18,8 @@
       <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="339">
+              <caret line="83" column="81" lean-forward="false" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="81" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -23,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamaTransit.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DynamaTransit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -46,8 +50,8 @@
       <file leaf-file-name="DynamaPredictionCortex.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,11 +77,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GoldenBearDeterminer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ScenarioManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -95,21 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicTimeMarkationManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NeocortexDataRequestBundler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="298">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -146,8 +150,8 @@
       <find>calculateFullRangeMarkationResults</find>
       <find>calculateFullRangeList</find>
       <find>calculateWinOrLoseMarkation</find>
-      <find>stockEntryTotalitiesList</find>
       <find>calculateWinOrLoseFullRangeMarkation</find>
+      <find>stockEntryTotalitiesList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +175,6 @@
         <option value="$PROJECT_DIR$/Scenario.py" />
         <option value="$PROJECT_DIR$/DataFilterManager.py" />
         <option value="$PROJECT_DIR$/ObservanceObject.py" />
-        <option value="$PROJECT_DIR$/GoldenBearDeterminer.py" />
         <option value="$PROJECT_DIR$/TimeManager.py" />
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/DowScraper.py" />
@@ -180,14 +183,15 @@
         <option value="$PROJECT_DIR$/NeocortexDataRequestBundler.py" />
         <option value="$PROJECT_DIR$/DataDisplayer.py" />
         <option value="$PROJECT_DIR$/DynamicTimeMarkationManager.py" />
-        <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/ScenarioManager.py" />
         <option value="$PROJECT_DIR$/DynamaDreamMatrix.py" />
         <option value="$PROJECT_DIR$/DynamaPredictionCortex.py" />
         <option value="$PROJECT_DIR$/DynamaNeuralNet.py" />
         <option value="$PROJECT_DIR$/DynamaMemmoryCortex.py" />
         <option value="$PROJECT_DIR$/DynamaMemoryCortex.py" />
+        <option value="$PROJECT_DIR$/OperationCenter.py" />
         <option value="$PROJECT_DIR$/DynamaTransit.py" />
+        <option value="$PROJECT_DIR$/GoldenBearDeterminer.py" />
       </list>
     </option>
   </component>
@@ -260,16 +264,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3675937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3675937" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -416,14 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchFinance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -485,7 +480,7 @@
         <state relative-caret-position="405">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -498,24 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NodeRequester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DynamicTimeMarkationManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -524,10 +501,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+    <entry file="file://$PROJECT_DIR$/NodeRequester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NeocortexDataRequestBundler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -544,18 +529,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ScenarioManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaDreamMatrix.py">
+    <entry file="file://$PROJECT_DIR$/DynamaMemoryCortex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -568,26 +553,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaMemoryCortex.py">
+    <entry file="file://$PROJECT_DIR$/DynamaDreamMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="83" column="81" lean-forward="false" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
+    <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

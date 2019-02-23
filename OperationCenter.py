@@ -6,6 +6,7 @@ from DynamicTimeMarkationManager import DynamicTimeMarkationManager
 from ScenarioManager import ScenarioManager
 from DataDisplayer import DataDisplayer
 from TimeManager import TimeManager
+from DynamaTransit import DynamaTransit
 
 class OperationCenter:
     def __init__(self):
@@ -15,6 +16,7 @@ class OperationCenter:
         self.dataFilterManager = DataFilterManager()
         self.dynamicTimeMarkationManager = DynamicTimeMarkationManager()
         self.timeManager = TimeManager()
+        self.dynamaTransit = DynamaTransit()
 
     def process_main_process_loop(self):
         self.main_process_loop()
@@ -78,4 +80,6 @@ class OperationCenter:
                 # print(observanceObjectResultsComposite)
             for observanceObjectResults in observanceObjectResultsComposite[0]:
                 print(observanceObjectResults.getScenarioOutcome())
+
+            DynamaTransit.transferObservanceObjectResults(observanceObjectResults)
 
