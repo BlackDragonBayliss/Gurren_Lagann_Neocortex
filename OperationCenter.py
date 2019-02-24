@@ -78,8 +78,8 @@ class OperationCenter:
                 observanceObjectResults = scenarioManager.calculateFullRangeMarkationResults(stockRangeContainerTenMinuteSetComposite)
                 observanceObjectResultsComposite.append(observanceObjectResults)
                 # print(observanceObjectResultsComposite)
-            for observanceObjectResults in observanceObjectResultsComposite[0]:
-                print(observanceObjectResults.getScenarioOutcome())
+            # for observanceObjectResults in observanceObjectResultsComposite[0]:
+                # print(observanceObjectResults.getScenarioOutcome())
 
-            dynamaTransit.transferObservanceObjectResults(observanceObjectResults)
+            dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
 

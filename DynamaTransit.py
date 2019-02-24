@@ -4,12 +4,12 @@ from GoldenBearDeterminer import GoldenBearDeterminer
 class DynamaTransit:
 
     def __init__(self):
-        self.observanceObjectResults = []
+        self.observanceObjectResultsComposite = []
 
-    def transferObservanceObjectResults(self, observanceObjectResults):
-        self.observanceObjectResults =  observanceObjectResults
+    def transferObservanceObjectResults(self, observanceObjectResultsComposite):
+        self.observanceObjectResultsComposite =  observanceObjectResultsComposite
         self.goldenBearDeterminer = GoldenBearDeterminer()
         # Transit Buy Register decision process(threaded locally most likey)
         # Transit GoldenBears decision process
             # Support needed for active continuous process
-        goldenBearDeterminer.processGoldenBears(self.observanceObjectResults)
+        goldenBearDeterminer.processGoldenBears(self.observanceObjectResultsComposite)

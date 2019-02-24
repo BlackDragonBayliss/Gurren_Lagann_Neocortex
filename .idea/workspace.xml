@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamaMetricsStoreManager.py" afterPath="$PROJECT_DIR$/DynamaMetricsStoreManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DynamaTransit.py" afterPath="$PROJECT_DIR$/DynamaTransit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoldenBearDeterminer.py" afterPath="$PROJECT_DIR$/GoldenBearDeterminer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NodeRequester.py" afterPath="$PROJECT_DIR$/NodeRequester.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+            <state relative-caret-position="149">
+              <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="68" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -29,7 +33,27 @@
         <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="76" />
+              <caret line="14" column="85" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoldenBearDeterminer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeRequester.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeRequester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -77,16 +101,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoldenBearDeterminer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LearningController.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LearningController.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,21 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NodeRequester.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NodeRequester.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DynamaMetricsStoreManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DynamaMetricsStoreManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,6 +152,7 @@
       <find>calculateWinOrLoseMarkation</find>
       <find>calculateWinOrLoseFullRangeMarkation</find>
       <find>stockEntryTotalitiesList</find>
+      <find>nodeRequester</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +172,6 @@
         <option value="$PROJECT_DIR$/TestDataGenerationMatrix.py" />
         <option value="$PROJECT_DIR$/GenerationDataMatrixFactory.py" />
         <option value="$PROJECT_DIR$/ScenarioFactory.py" />
-        <option value="$PROJECT_DIR$/NodeRequester.py" />
         <option value="$PROJECT_DIR$/Scenario.py" />
         <option value="$PROJECT_DIR$/DataFilterManager.py" />
         <option value="$PROJECT_DIR$/ObservanceObject.py" />
@@ -185,10 +189,11 @@
         <option value="$PROJECT_DIR$/DynamaNeuralNet.py" />
         <option value="$PROJECT_DIR$/DynamaMemmoryCortex.py" />
         <option value="$PROJECT_DIR$/DynamaMemoryCortex.py" />
-        <option value="$PROJECT_DIR$/DynamaTransit.py" />
-        <option value="$PROJECT_DIR$/GoldenBearDeterminer.py" />
-        <option value="$PROJECT_DIR$/DynamaMetricsStoreManager.py" />
         <option value="$PROJECT_DIR$/OperationCenter.py" />
+        <option value="$PROJECT_DIR$/DynamaTransit.py" />
+        <option value="$PROJECT_DIR$/DynamaMetricsStoreManager.py" />
+        <option value="$PROJECT_DIR$/NodeRequester.py" />
+        <option value="$PROJECT_DIR$/GoldenBearDeterminer.py" />
       </list>
     </option>
   </component>
@@ -518,34 +523,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DynamaNeuralNet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaMetricsStoreManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -566,10 +547,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NodeRequester.py">
+    <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="210">
+          <caret line="14" column="85" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaMetricsStoreManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -584,21 +573,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DynamaTransit.py">
+    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="76" />
+        <state relative-caret-position="149">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DynamaPredictionCortex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OperationCenter.py">
+    <entry file="file://$PROJECT_DIR$/NodeRequester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoldenBearDeterminer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

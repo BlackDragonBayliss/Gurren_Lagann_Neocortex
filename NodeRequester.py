@@ -18,6 +18,14 @@ class NodeRequester:
                 "date": date
             })
         return response
+    def getGoldenBearMetrics(self):
+        response = self.postRequest(
+            {
+                "request_type": "neocortex",
+                "isGetAllDaysByDate": 1,
+                "date": date
+            })
+        return response
 
     def postRequest(self, jsonData):
         loop = asyncio.new_event_loop()

@@ -1,7 +1,8 @@
+from NodeRequester import NodeRequester
 
 class DynamaMetricsStoreManager:
     def __init__(self):
-        cortexicalThought = []
+        self.nodeRequester = NodeRequester
 
     def storeMetrics(self):
         pass
@@ -9,3 +10,7 @@ class DynamaMetricsStoreManager:
     def createCustomStore(self):
         pass
 
+    def retrieveStore(self,registrationID):
+        pass
+
+    def retrieveGoldenBearMetrics(self):
