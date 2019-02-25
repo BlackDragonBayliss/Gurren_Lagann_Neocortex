@@ -1,11 +1,11 @@
 
-class GoldenBearDeterminer:
+class GoldenGooseDeterminer:
     def __init__(self):
         self.range = []
         self.highAskDelimiter = 16.00
         self.lowAskDelimiter = 3.00
 
-    def processGoldenBears(self, observanceObjectResultsComposite):
+    def processGoldenGeese(self, observanceObjectResultsComposite):
         self.observanceObjectResultsComposite = observanceObjectResultsComposite
         self.refreshMetrics()
 
