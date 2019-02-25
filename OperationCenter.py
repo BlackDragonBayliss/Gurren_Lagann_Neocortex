@@ -81,5 +81,5 @@ class OperationCenter:
             # for observanceObjectResults in observanceObjectResultsComposite[0]:
                 # print(observanceObjectResults.getScenarioOutcome())
 
-            dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
+            self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
 

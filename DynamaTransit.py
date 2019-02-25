@@ -11,4 +11,4 @@ class DynamaTransit:
         # Transit Buy Register decision process(threaded locally most likely)
         # Transit GoldenGoose decision process
             # Support needed for active continuous process
-        goldenGooseDeterminer.processGoldenGeese(self.observanceObjectResultsComposite)
+        self.goldenGooseDeterminer.processGoldenGeese(self.observanceObjectResultsComposite)

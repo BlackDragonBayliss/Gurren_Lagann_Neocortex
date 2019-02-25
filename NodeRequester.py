@@ -18,12 +18,19 @@ class NodeRequester:
                 "date": date
             })
         return response
+
     def getGoldenGooseMetrics(self):
-        response = self.postRequest(
-            {
-                "request_type": "neocortex",
-                "isGetGoldenGooseMetrics": 1
-            })
+        response = {
+            "data": {
+                "highPriceDelimiter": 14,
+                "lowPriceDelimiter": 5
+            }
+        }
+            # self.postRequest(
+            # {
+            #     "request_type": "neocortex",
+            #     "isGetGoldenGooseMetrics": 1
+            # })
         return response
 
     def postRequest(self, jsonData):

@@ -1,25 +1,33 @@
+from NodeRequester import NodeRequester
 
 class GoldenGooseDeterminer:
     def __init__(self):
         self.range = []
-        self.highAskDelimiter = 0
-        self.lowAskDelimiter = 0
+        self.highPriceDelimiter = 0
+        self.lowPriceDelimiter = 0
+        self.nodeRequester = NodeRequester()
 
     def processGoldenGeese(self, observanceObjectResultsComposite):
         self.observanceObjectResultsComposite = observanceObjectResultsComposite
         self.refreshMetrics()
         for observanceObjectResults in observanceObjectResultsComposite:
-            self.isGoldenGoose(observanceObjectResults.getFullRangeSet()[0])
+            # print(observanceObjectResults)
+            firstResult = observanceObjectResults[0].getMarkationSet()[0]
+            # print(firstResult)
+            print(str(self.isGoldenGoose(firstResult)))
 
     def refreshMetrics(self):
         response = self.nodeRequester.getGoldenGooseMetrics()
-        self.highAskDelimiter = response["highAskDelimiter"]
-        self.lowAskDelimiter = response["lowAskDelimiter"]
+        self.highPriceDelimiter = float(response["data"]["highPriceDelimiter"])
+        self.lowPriceDelimiter = float(response["data"]["lowPriceDelimiter"])
+
+        print("Look at that highPriceDelimiter wow: "+str(self.highPriceDelimiter))
+        print("Look at that lowPriceDelimiter wow: "+ str(self.lowPriceDelimiter))
 
     def isGoldenGoose(self, stock):
         # Support for multi-metric calculations
         # Support for far-fetch-mechanism
-        if(self.isWithinRange(stock)):
+        if(self.isWithinRange(float(stock["bid"]))):
             return True
         return False
 
