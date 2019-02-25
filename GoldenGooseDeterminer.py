@@ -2,22 +2,21 @@
 class GoldenGooseDeterminer:
     def __init__(self):
         self.range = []
-        self.highAskDelimiter = 16.00
-        self.lowAskDelimiter = 3.00
+        self.highAskDelimiter = 0
+        self.lowAskDelimiter = 0
 
     def processGoldenGeese(self, observanceObjectResultsComposite):
         self.observanceObjectResultsComposite = observanceObjectResultsComposite
         self.refreshMetrics()
-
         for observanceObjectResults in observanceObjectResultsComposite:
-            pass
+            self.isGoldenGoose(observanceObjectResults.getFullRangeSet()[0])
 
     def refreshMetrics(self):
         response = self.nodeRequester.getGoldenGooseMetrics()
         self.highAskDelimiter = response["highAskDelimiter"]
         self.lowAskDelimiter = response["lowAskDelimiter"]
 
-    def isGoldenBear(self, stock):
+    def isGoldenGoose(self, stock):
         # Support for multi-metric calculations
         # Support for far-fetch-mechanism
         if(self.isWithinRange(stock)):
