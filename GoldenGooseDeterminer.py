@@ -13,7 +13,7 @@ class GoldenGooseDeterminer:
             pass
 
     def refreshMetrics(self):
-        response = self.nodeRequester.getGoldenBearMetrics()
+        response = self.nodeRequester.getGoldenGooseMetrics()
         self.highAskDelimiter = response["highAskDelimiter"]
         self.lowAskDelimiter = response["lowAskDelimiter"]
 

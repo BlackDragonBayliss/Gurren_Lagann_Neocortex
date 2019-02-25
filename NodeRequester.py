@@ -18,12 +18,11 @@ class NodeRequester:
                 "date": date
             })
         return response
-    def getGoldenBearMetrics(self):
+    def getGoldenGooseMetrics(self):
         response = self.postRequest(
             {
                 "request_type": "neocortex",
-                "isGetAllDaysByDate": 1,
-                "date": date
+                "isGetGoldenGooseMetrics": 1
             })
         return response
 

@@ -14,3 +14,4 @@ class DynamaMetricsStoreManager:
         pass
 
     def retrieveGoldenBearMetrics(self):
+        self.nodeRequester.getGoldenGooseMetrics()
