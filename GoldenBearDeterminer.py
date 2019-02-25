@@ -2,8 +2,8 @@
 class GoldenBearDeterminer:
     def __init__(self):
         self.range = []
-        self.highPriceDelimiter = 16.00
-        self.lowPriceDelimiter = 3.00
+        self.highAskDelimiter = 16.00
+        self.lowAskDelimiter = 3.00
 
     def processGoldenBears(self, observanceObjectResultsComposite):
         self.observanceObjectResultsComposite = observanceObjectResultsComposite
@@ -14,6 +14,8 @@ class GoldenBearDeterminer:
 
     def refreshMetrics(self):
         response = self.nodeRequester.getGoldenBearMetrics()
+        self.highAskDelimiter = response["highAskDelimiter"]
+        self.lowAskDelimiter = response["lowAskDelimiter"]
 
     def isGoldenBear(self, stock):
         # Support for multi-metric calculations

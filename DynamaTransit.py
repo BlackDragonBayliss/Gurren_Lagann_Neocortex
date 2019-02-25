@@ -1,6 +1,5 @@
 from GoldenBearDeterminer import GoldenBearDeterminer
 
-
 class DynamaTransit:
 
     def __init__(self):
