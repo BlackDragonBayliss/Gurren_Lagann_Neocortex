@@ -29,6 +29,9 @@ class OperationCenter:
         self.event_trigger_top_stock_gather_process_phase_one()
         self.is_condition_top_stock_pull_gather = True
 
+    def initialDeliveryGoldenGooseProcess(self, data):
+        self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
+
     def getNodeInformation(self, caseCalculationType):
         scenarioManager = ScenarioManager()
         # response = self.nodeRequester.getAllRecordSets("02/08/2019")
