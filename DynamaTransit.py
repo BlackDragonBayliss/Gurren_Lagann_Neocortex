@@ -7,7 +7,7 @@ class DynamaTransit:
 
     def transferObservanceObjectResults(self, data):
         self.goldenGooseDeterminer = GoldenGooseDeterminer()
-        # Transit Buy Register decision process(threaded locally most likely)
         # Transit GoldenGoose decision process
             # Support needed for active continuous process
         self.goldenGooseDeterminer.processGoldenGeese(data)
+
