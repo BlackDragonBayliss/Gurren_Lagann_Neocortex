@@ -39,11 +39,10 @@ class NeocortexDataRequestBundler:
     def process_data_initialization(self, stock):
         self.dataBundleRecordSetInitiation = 1
         json = self.create_request_bundle(stock)
-        # self.reset_data_initialization_value()
+
         print("bundle init json: " + str(json))
         self.post_request_bundle(json)
 
-    # def obtainGoldenBearResults(self):
 
     def createRequestBundle(self, goldenBearResults):
 
