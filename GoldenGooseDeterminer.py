@@ -11,9 +11,8 @@ class GoldenGooseDeterminer:
         self.observanceObjectResultsComposite = observanceObjectResultsComposite
         self.refreshMetrics()
         for observanceObjectResults in observanceObjectResultsComposite:
-            # print(observanceObjectResults)
             firstResult = observanceObjectResults[0].getMarkationSet()[0]
-            # print(firstResult)
+
             print(str(self.isGoldenGoose(firstResult)))
 
     def refreshMetrics(self):

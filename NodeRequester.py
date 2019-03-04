@@ -26,11 +26,6 @@ class NodeRequester:
                 "lowPriceDelimiter": 5
             }
         }
-            # self.postRequest(
-            # {
-            #     "request_type": "neocortex",
-            #     "isGetGoldenGooseMetrics": 1
-            # })
         return response
 
     def postRequest(self, jsonData):

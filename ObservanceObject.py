@@ -18,8 +18,6 @@ class ObservanceObject:
         self.winOrLose = 0
         self.buyStartTime = 0
 
-
-
     def setFullRangeSet(self,fullRangeSet):
         self.fullRangeSet = fullRangeSet
     def getFullRangeSet(self):
@@ -64,9 +62,6 @@ class ObservanceObject:
         self.scenarioOutcome = scenarioOutcome
     def getScenarioOutcome(self):
         return self.scenarioOutcome
-
-
-
 
     def setBuyStartTime(self, case):
         self.buyStartTime = case
