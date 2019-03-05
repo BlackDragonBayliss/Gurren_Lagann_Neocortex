@@ -21,15 +21,15 @@ def recordQueries():
     print(content)
     return "Query received"
 
-# @app.route('/birdMessengerQuery', methods=['POST'])
-# def birdMessengerQuery():
-#     content = request.get_json()
-#     print(content)
-#
-#     operationCenter = OperationCenter()
-#     operationCenter.getNodeInformation(2)
-#
-#     return "birdMessengerQuery received"
+@app.route('/birdMessengerQuery', methods=['POST'])
+def birdMessengerQuery():
+    content = request.get_json()
+    print(content)
+
+    # operationCenter = OperationCenter()
+    # operationCenter.getNodeInformation(2)
+
+    return "birdMessengerQuery received"
 
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0', port=4440)
