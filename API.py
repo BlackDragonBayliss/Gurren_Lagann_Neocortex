@@ -26,9 +26,6 @@ def birdMessengerQuery():
     content = request.get_json()
     print(content)
 
-    # operationCenter = OperationCenter()
-    # operationCenter.getNodeInformation(2)
-
     return "birdMessengerQuery received"
 
 if __name__ == '__main__':

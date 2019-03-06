@@ -44,8 +44,6 @@ class ScenarioManager:
             markationResults.append(observanceObject)
         return markationResults
 
-    ##
-
     def stockChronologicalLocationIdentifier(self, stockList):
         # Chron [stock, index]
         chronStart = self.calculateStockIndexToMarkate(stockList, self.chronIdentifierStartList)
@@ -62,11 +60,6 @@ class ScenarioManager:
                 if(stock["minute_created"] == chronListToFind[1]):
                     return [stock,index]
             index += 1
-
-    ##return stock and index of desired markation [stock,index]
-
-
-
 
     def calculateWinOrLoseFullRange(self, observanceObject):
         fullRangeSet = observanceObject.getFullRangeSet()
@@ -111,12 +104,10 @@ class ScenarioManager:
 
                 break
             if (float(stock["ask"]) <= stockYieldLowPrice):
-                # print("hit ask low")
                 indexInternalSet += 1
                 observanceObject.setAskSellPrice(stock["ask"])
                 percentageDifference = (float(observanceObject.getBoughtBidPrice()) - float(stock["ask"])) / float(
                     observanceObject.getBoughtBidPrice())
-                # print(stock["ask"])
 
                 observanceObject.setScenarioOutcome({
                     "symbol": stock["symbol"],
@@ -130,7 +121,6 @@ class ScenarioManager:
 
                 break
             if (index == (len(fullRangeSet) - 1)):
-                # print("no yield found at index: " + str(index))
                 indexInternalSet += 1
                 percentageDifference = (float(observanceObject.getBoughtBidPrice()) - float(stock["ask"])) / float(
                     observanceObject.getBoughtBidPrice())
@@ -190,12 +180,10 @@ class ScenarioManager:
 
                 break
             if (float(stock["ask"]) <= stockYieldLowPrice):
-                # print("hit ask low")
                 indexInternalSet += 1
                 observanceObject.setAskSellPrice(stock["ask"])
                 percentageDifference = (float(observanceObject.getBoughtBidPrice()) - float(stock["ask"])) / float(
                     observanceObject.getBoughtBidPrice())
-                # print(stock["ask"])
 
                 observanceObject.setScenarioOutcome({
                     "symbol": stock["symbol"],
