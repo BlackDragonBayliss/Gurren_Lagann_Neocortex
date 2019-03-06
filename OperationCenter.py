@@ -31,6 +31,10 @@ class OperationCenter:
 
     def goldenGooseProcess(self, data):
         # transform data into different process
+        # intake stock json, take price and pchg
+        # determine ... store in decision record
+        # GoldenGooseDecisionRecord
+
         self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
 
     def getNodeInformation(self, caseCalculationType):
