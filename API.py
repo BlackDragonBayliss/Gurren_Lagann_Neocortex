@@ -24,7 +24,7 @@ def recordQueries():
 @app.route('/birdMessengerQuery', methods=['POST'])
 def birdMessengerQuery():
     content = request.get_json()
-    print(content)
+    # print(content)
 
     return "birdMessengerQuery received"
 

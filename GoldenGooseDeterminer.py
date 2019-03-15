@@ -25,7 +25,6 @@ class GoldenGooseDeterminer:
 
     def isGoldenGoose(self, stock):
         # Support for multi-metric calculations
-        # Support for far-fetch-mechanism
         if(self.isWithinRange(float(stock["bid"]))):
             return True
         return False
