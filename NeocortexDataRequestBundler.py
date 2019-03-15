@@ -48,14 +48,14 @@ class NeocortexDataRequestBundler:
 
         json = {
             "request_type": "neocortexDataRequestBundle",
-            "isRequestBundle": 1
+            "isRequestBundle": 1,
             "dataPayload": {
-            "day": date
+            "day": date,
             "isGoldenBearPresent": 0,
             "sym1": {
                 "symbol": sym,
                 "goldenBearStatus": {
-                    "isGoldenBear": 0
+                    "isGoldenBear": 0,
                     "algorithmsUsed": "fullLength"
                 }
             },
