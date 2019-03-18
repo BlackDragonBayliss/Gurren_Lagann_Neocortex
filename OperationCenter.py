@@ -7,6 +7,7 @@ from ScenarioManager import ScenarioManager
 from DataDisplayer import DataDisplayer
 from TimeManager import TimeManager
 from DynamaTransit import DynamaTransit
+from TypeConverter import TypeConverter
 
 class OperationCenter:
     def __init__(self):
@@ -31,22 +32,19 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def goldenGooseProcess(self, data):
-        self.typeConverter.parseGoldenGooseValidationData(data)
+        print(data)
+        # self.typeConverter.parseGoldenGooseValidationData(self, data)
+        listGeeseMetrics = []
+        for key, value in data.items():
+            listGeeseMetrics.append(value)
+        print("list symbol values: "+str(listGeeseMetrics))
+
 
 
         # intake stock json, take price and pchg
         # transform json into list, of price and pchg.
         # get price and pchg of each item in list.
             #parse json of each in list
-
-
-        print(data)
-
-
-
-        # determine ... store in decision record
-        # GoldenGooseDecisionRecord
-
 
         self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
 

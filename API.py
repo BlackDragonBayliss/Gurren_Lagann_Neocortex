@@ -28,12 +28,15 @@ def recordQueries():
             if value == "bird1":
                 for key, value in content.items():
                     if key == "payload":
-                        for key, value in value.items():
-                            if key == "data":
-                                # print(value)
+                        operationCenter = OperationCenter()
+                        operationCenter.goldenGooseProcess(value)
 
-                                operationCenter = OperationCenter()
-                                operationCenter.goldenGooseProcess(value)
+
+                        # for key, value in value.items():
+                        #     if key == "data":
+                        #         # print(value)
+
+
                                 # operation_center = Operation_Center()
                                 # operation_center.process_async_top_stock_phase1_internal()
                                 # return_value = 'res'

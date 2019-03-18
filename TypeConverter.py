@@ -1,9 +1,9 @@
-from Stock_Composite import Stock_Composite
-from Stock import Stock
-from Account_Information import Account_Information
+# from Stock_Composite import Stock_Composite
+# from Stock import Stock
+# from Account_Information import Account_Information
 import sched, time, calendar
 
-class Type_Converter:
+class TypeConverter:
     def __init__(self):
         self.json_top_stocks = {}
         self.list_top_stocks = []
@@ -58,7 +58,7 @@ class Type_Converter:
         }
         return jsonRequest
 
-    def parseGoldenGooseValidationData(self, str_to_parse, operation_center):
+    def parseGoldenGooseValidationData(self, operation_center, str_to_pars ):
 
         #Symbol, price, pchg
 
