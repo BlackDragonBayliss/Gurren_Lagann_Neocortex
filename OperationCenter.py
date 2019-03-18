@@ -13,6 +13,7 @@ class OperationCenter:
     def __init__(self):
         self.list_chosen_data_managers = []
         self.chosen_stock_temp_container = []
+        self.listGoldenGeese = []
         self.nodeRequester = NodeRequester()
         self.dataFilterManager = DataFilterManager()
         self.dynamicTimeMarkationManager = DynamicTimeMarkationManager()
@@ -37,16 +38,14 @@ class OperationCenter:
         listGeeseMetrics = []
         for key, value in data.items():
             listGeeseMetrics.append(value)
-        print("list symbol values: "+str(listGeeseMetrics))
-
-
+        # print("list symbol values: "+str(listGeeseMetrics))
 
         # intake stock json, take price and pchg
         # transform json into list, of price and pchg.
         # get price and pchg of each item in list.
             #parse json of each in list
 
-        self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
+        self.dynamaTransit.goldenGooseProcessIntake(self, listGeeseMetrics)
 
     def getNodeInformation(self, caseCalculationType):
         scenarioManager = ScenarioManager()
@@ -102,3 +101,7 @@ class OperationCenter:
 
             self.dynamaTransit.transferObservanceObjectResults(observanceObjectResultsComposite)
 
+    def setListGoldenGeese(self, listGoldenGeese):
+        self.listGoldenGeese = listGoldenGeese
+    def getListGoldenGeese(self):
+        return self.listGoldenGeese

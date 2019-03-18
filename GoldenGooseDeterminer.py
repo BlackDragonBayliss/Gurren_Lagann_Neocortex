@@ -3,19 +3,32 @@ from NodeRequester import NodeRequester
 class GoldenGooseDeterminer:
     def __init__(self):
         self.range = []
-        self.highPriceDelimiter = 0
-        self.lowPriceDelimiter = 0
+        self.highPriceDelimiter = 20.0
+        self.lowPriceDelimiter = 2.0
         self.nodeRequester = NodeRequester()
 
-    def processGoldenGeese(self, observanceObjectResultsComposite):
-        self.observanceObjectResultsComposite = observanceObjectResultsComposite
-        self.refreshMetrics()
-        for observanceObjectResults in observanceObjectResultsComposite:
-            firstResult = observanceObjectResults[0].getMarkationSet()[0]
+    def processGoldenGeese(self, operationCenter, listRawGeeseMetrics):
+        # self.refreshHardMetrics()
 
-            print(str(self.isGoldenGoose(firstResult)))
+        # listFilteredGeeseMetrics = [[listRawGeeseMetrics[0],listRawGeeseMetrics[1],listRawGeeseMetrics[2],listRawGeeseMetrics[3],listRawGeeseMetrics[4]],
+        #                             [listRawGeeseMetrics[5],listRawGeeseMetrics[6],listRawGeeseMetrics[7],listRawGeeseMetrics[8],listRawGeeseMetrics[9]],
+        #                             [listRawGeeseMetrics[10],listRawGeeseMetrics[11],listRawGeeseMetrics[12],listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
-    def refreshMetrics(self):
+        # print(len(listFilteredGeeseMetrics))
+        listFilteredGeeseMetrics = [['HUYA', '26.710', '2.01', '0.000', '0.00'], ['BAY', '26.710', '19.01', '0.000', '0.00'], ['BAY1', '26.710', '1.01', '0.000', '0.00']]
+        #First order metrics,
+        listSuccessfulGooseMetrics = []
+        for filteredGeeseMetrics in listFilteredGeeseMetrics:
+            # print(filteredGeeseMetrics)
+            if(self.isGoldenGoose(filteredGeeseMetrics)):
+                listSuccessfulGooseMetrics.append(filteredGeeseMetrics)
+
+        # print(listSuccessfulGooseMetrics)
+        operationCenter.setListGoldenGeese(listSuccessfulGooseMetrics)
+        print("List flying geese: "+str(operationCenter.getListGoldenGeese()))
+
+
+    def refreshHardMetrics(self):
         response = self.nodeRequester.getGoldenGooseMetrics()
         self.highPriceDelimiter = float(response["data"]["highPriceDelimiter"])
         self.lowPriceDelimiter = float(response["data"]["lowPriceDelimiter"])
@@ -23,9 +36,16 @@ class GoldenGooseDeterminer:
         print("Look at that highPriceDelimiter wow: "+str(self.highPriceDelimiter))
         print("Look at that lowPriceDelimiter wow: "+ str(self.lowPriceDelimiter))
 
-    def isGoldenGoose(self, stock):
+    # def isGoldenGoose(self, stock):
+    #     # Support for multi-metric calculations
+    #     if(self.isWithinRange(float(stock["bid"]))):
+    #         return True
+    #     return False
+
+    def isGoldenGoose(self, filteredGeeseMetrics):
         # Support for multi-metric calculations
-        if(self.isWithinRange(float(stock["bid"]))):
+        if(self.isWithinRange(float(filteredGeeseMetrics[2]))):
+            print("GG returning true: "+ str(filteredGeeseMetrics[2]))
             return True
         return False
 
