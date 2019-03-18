@@ -17,6 +17,7 @@ class OperationCenter:
         self.dynamicTimeMarkationManager = DynamicTimeMarkationManager()
         self.timeManager = TimeManager()
         self.dynamaTransit = DynamaTransit()
+        self.typeConverter = TypeConverter()
 
     def process_main_process_loop(self):
         self.main_process_loop()
@@ -30,12 +31,14 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def goldenGooseProcess(self, data):
+        self.typeConverter.parseGoldenGooseValidationData(data)
+
 
         # intake stock json, take price and pchg
         # transform json into list, of price and pchg.
         # get price and pchg of each item in list.
             #parse json of each in list
-            
+
 
         print(data)
 

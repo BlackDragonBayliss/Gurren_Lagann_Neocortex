@@ -58,7 +58,10 @@ class Type_Converter:
         }
         return jsonRequest
 
-    def parse_stock_queries(self, str_to_parse, operation_center):
+    def parseGoldenGooseValidationData(self, str_to_parse, operation_center):
+
+        #Symbol, price, pchg
+
         data_set_group_0_1 = str_to_parse.split('</quotetype>')
         data_set_group_0_2 = data_set_group_0_1[1].split('</quotetype>')
         data_set_group_0_3 = data_set_group_0_2[0].split('</quotes>')
