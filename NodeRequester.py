@@ -20,6 +20,12 @@ class NodeRequester:
         return response
 
     def getGoldenGooseMetrics(self):
+        # response = self.postRequest(
+        #     {
+        #         "request_type": "neocortex",
+        #         "isGetAllDaysByDate": 1,
+        #         "date": date
+        #     })
         response = {
             "data": {
                 "highPriceDelimiter": 14,
@@ -27,6 +33,21 @@ class NodeRequester:
             }
         }
         return response
+
+    def postGoldenGooseResult(self,isChosenDetermined,symbol1,priority1,symbol2,priority2,symbol3,priority3):
+        response = self.postRequest(
+            {
+                "request_type": "intakeGoldenGooseResultStore",
+                "isChosenDetermined": isChosenDetermined,
+               "symbol1": symbol1,
+               "priority1": priority1,
+               "symbol2": symbol2,
+               "priority2": priority2,
+               "symbol3":symbol3,
+               "priority3": priority3
+            })
+        return response
+
 
     def postRequest(self, jsonData):
         loop = asyncio.new_event_loop()
