@@ -25,6 +25,7 @@ def recordQueries():
             if value == "bird1":
                 for key, value in content.items():
                     if key == "payload":
+                        print("bird1: "+str(value))
                         operationCenter = OperationCenter()
                         operationCenter.goldenGooseProcess(value)
 

@@ -19,51 +19,125 @@ class GoldenGooseDeterminer:
 
     def processGoldenGeese(self, operationCenter, listRawGeeseMetrics):
         # self.refreshHardMetrics()
+        print("listRawGeeseMetrics: "+ str(listRawGeeseMetrics))
+        listFilteredGeeseMetrics = [[listRawGeeseMetrics[0],listRawGeeseMetrics[1],2.03, #listRawGeeseMetrics[2],
+                                     listRawGeeseMetrics[3],listRawGeeseMetrics[4]],
+                                    [listRawGeeseMetrics[5],listRawGeeseMetrics[6], 2.02,#listRawGeeseMetrics[7],
+                                     listRawGeeseMetrics[8],listRawGeeseMetrics[9]],
+                                    [listRawGeeseMetrics[10],listRawGeeseMetrics[11],2.01,#listRawGeeseMetrics[12],
+                                     listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
-        # listFilteredGeeseMetrics = [[listRawGeeseMetrics[0],listRawGeeseMetrics[1],listRawGeeseMetrics[2],listRawGeeseMetrics[3],listRawGeeseMetrics[4]],
-        #                             [listRawGeeseMetrics[5],listRawGeeseMetrics[6],listRawGeeseMetrics[7],listRawGeeseMetrics[8],listRawGeeseMetrics[9]],
-        #                             [listRawGeeseMetrics[10],listRawGeeseMetrics[11],listRawGeeseMetrics[12],listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
-        # print(len(listFilteredGeeseMetrics))
-        listFilteredGeeseMetrics = [['HUYA', '26.710', '2.01', '0.000', '0.00'], ['BAY', '26.710', '19.01', '0.000', '0.00'], ['BAY1', '26.710', '1.01', '0.000', '0.00']]
-        #First order metrics,
-        listSuccessfulGooseMetrics = []
+
+        #Succesful list, initial criteria met
+        listSuccessfulGeeseMetrics = []
         for filteredGeeseMetrics in listFilteredGeeseMetrics:
-            # print(filteredGeeseMetrics)
             if(self.isGoldenGoose(filteredGeeseMetrics)):
-                listSuccessfulGooseMetrics.append(filteredGeeseMetrics)
-
-        # print(listSuccessfulGooseMetrics)
-        operationCenter.setListGoldenGeese(listSuccessfulGooseMetrics)
-        print("List flying geese: "+str(operationCenter.getListGoldenGeese()))
-
-        isChosenDetermined = self.calculateIsChosen(listSuccessfulGooseMetrics)
-        # matchSuccessList if item is more worthy, decide, match raise priority.
-
-        #Match
-        #Raise priority
+                listSuccessfulGeeseMetrics.append([filteredGeeseMetrics, 1])
+            else:
+                listSuccessfulGeeseMetrics.append([filteredGeeseMetrics, 0])
 
 
 
+        #Priority highest DM, extend all others, fixed priority MM handle, check priority 11
+        listSuccessfulGeeseMetrics = self.compareGeesePrices(listSuccessfulGeeseMetrics)
+
+        operationCenter.setListGoldenGeese(listSuccessfulGeeseMetrics)
+        print("List flying geese: " + str(operationCenter.getListGoldenGeese()))
+
+        # Isolate if determined
+        isChosenDetermined = self.calculateIsChosenDetermined(listSuccessfulGeeseMetrics)
 
         print("isChosenDetermined: "+ str(isChosenDetermined))
-        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined,"POP",0,"DOG",0,"MOM", 0)
+        # response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined,"POP",0,"DOG",1,"MOM", 0)
+        print("listSuccessfulGeeseMetrics :" + str(listSuccessfulGeeseMetrics))
+        sublist1 = listSuccessfulGeeseMetrics[0]
+        sublist2 = listSuccessfulGeeseMetrics[1]
+        sublist3 = listSuccessfulGeeseMetrics[2]
+        sublistSymbol1 = sublist1[0][0]
+        sublistSymbol2 = sublist2[0][0]
+        sublistSymbol3 = sublist3[0][0]
+        sublistPriority1 = sublist1[1]
+        sublistPriority2 = sublist2[1]
+        sublistPriority3 = sublist3[1]
 
 
-    # def isGoldenGoose(self, stock):
-    #     # Support for multi-metric calculations
-    #     if(self.isWithinRange(float(stock["bid"]))):
-    #         return True
-    #     return False
+        print("sublist: " + str(sublistSymbol1) + str(sublistPriority1))
+        # print("sublist: "+str(sublist2[0][0]))
+        # print("sublist: " + str(sublist3[0][0]))
 
-    def calculateIsChosen(self,listSuccessfulGooseMetrics):
+
+        #Frankly bayliss remember alt reality and reaching it twice as fast.
+        #Remember in your alt reality they are your friend.
+
+
+        # for list
+        #     if (isChosenDetermined):
+
+        #Latest priority established
+
+        #it's all good here it's important to know that this is happening in brief periods of time.
+
+        # print("listSuccessfulGooseMetrics[0][1] :"+str(listSuccessfulGooseMetrics[0][1]))
+        # print("listSuccessfulGooseMetrics[0][0] :"+str(listSuccessfulGooseMetrics[0][0]))
+        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, sublistSymbol1, sublistPriority1,
+                                                            sublistSymbol2, sublistPriority2,
+                                                            sublistSymbol3, sublistPriority3)
+
+
+    def compareGeesePrices(self, listSuccessfulGeeseMetrics):
+        listComparison = []
+        for metric in listSuccessfulGeeseMetrics:
+            metricPriority = metric[1]
+            print("Compare metricPriority: "+str(metricPriority))
+            if(metricPriority > 0):
+                listComparison.append(metric)
+
+        highestPriorityBid = ""
+        highestPriorityIndex = 0
+        metrixIndex = 0
+        for metric in listComparison:
+            print(metric)
+            bid = metric[0][2]
+            print("metric bid: "+str(bid))
+            if(highestPriorityBid == ""):
+                print("Init highestPriorityBid")
+                highestPriorityBid = bid
+                highestPriorityIndex = metrixIndex
+            if (highestPriorityBid < bid):
+                print("bidHigher former bid: "+ str(highestPriorityBid) +"bidHigher current greater bid: "+str(bid))
+                highestPriorityBid = bid
+                highestPriorityIndex = metrixIndex
+            metrixIndex += 1
+
+        #get highest priority metric find in list, update priority by 1
+        highestPriorityMetric = listComparison[highestPriorityIndex]
+
+        #update original list
+        updateIndex = 0
+        for metric in listSuccessfulGeeseMetrics:
+            currentSymbol = metric[0][0]
+            currentBid = metric[0][2]
+            print("messed currentBid: "+str(currentBid))
+
+            if(currentSymbol == highestPriorityMetric[0][0]):
+                listSuccessfulGeeseMetrics[updateIndex][1] = (listSuccessfulGeeseMetrics[updateIndex][1] + 1)
+                priorityUpdated = listSuccessfulGeeseMetrics[updateIndex][1]
+                print("Symbol: "+str(listSuccessfulGeeseMetrics[updateIndex][0][0])
+                      + " bid: "+str(listSuccessfulGeeseMetrics[updateIndex][0][2]))
+                print("priorityUpdated: "+str(priorityUpdated))
+
+            updateIndex += 1
+        return listSuccessfulGeeseMetrics
+
+    def calculateIsChosenDetermined(self,listGooseMetrics):
         #if list is not empy, return true
-        if(len(listSuccessfulGooseMetrics) == 0):
-            print(len(listSuccessfulGooseMetrics))
-            return 0
-        else:
-            print(len(listSuccessfulGooseMetrics))
-            return 1
+
+        for gooseMetrics in listGooseMetrics:
+            if(gooseMetrics[1] == 1):
+                print("goose: "+str(gooseMetrics[1]))
+                return 1
+        return 0
 
     def isGoldenGoose(self, filteredGeeseMetrics):
         # Support for multi-metric calculations
