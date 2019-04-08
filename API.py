@@ -31,6 +31,24 @@ def recordQueries():
 
     return "Query received"
 
+@app.route('/test1', methods=['POST'])
+def test():
+    content = request.get_json()
+    for key, value in content.items():
+        print("hit bird intake")
+        if key == 'request_type':
+            if value == "test1":
+                for key, value in content.items():
+                    if key == "list_of_list_of_crap":
+                        # print(str(value))
+                        for value in value:
+                            print(str(value))
+                            for value in value:
+                                print (value)
+                        # operationCenter = OperationCenter()
+                        # operationCenter.goldenGooseProcess(value)
+
+    return "Query received"
 
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0', port=4440)

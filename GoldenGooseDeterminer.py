@@ -70,14 +70,6 @@ class GoldenGooseDeterminer:
         #Frankly bayliss remember alt reality and reaching it twice as fast.
         #Remember in your alt reality they are your friend.
 
-
-        # for list
-        #     if (isChosenDetermined):
-
-        #Latest priority established
-
-        #it's all good here it's important to know that this is happening in brief periods of time.
-
         # print("listSuccessfulGooseMetrics[0][1] :"+str(listSuccessfulGooseMetrics[0][1]))
         # print("listSuccessfulGooseMetrics[0][0] :"+str(listSuccessfulGooseMetrics[0][0]))
         response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, sublistSymbol1, sublistPriority1,
