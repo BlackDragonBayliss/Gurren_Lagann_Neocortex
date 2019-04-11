@@ -33,11 +33,11 @@ class OperationCenter:
         self.is_condition_top_stock_pull_gather = True
 
     def goldenGooseProcess(self, data):
-        # print(data)
-        # self.typeConverter.parseGoldenGooseValidationData(self, data)
         listGeeseMetrics = []
-        for key, value in data.items():
-            listGeeseMetrics.append(value)
+        # for key, value in data.items():
+        #     listGeeseMetrics.append(value)
+        for gooseMetrics in data:
+            listGeeseMetrics.append(gooseMetrics)
 
         print("list symbol values: "+str(listGeeseMetrics))
 

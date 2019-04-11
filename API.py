@@ -19,16 +19,25 @@ def init_system():
 def recordQueries():
     content = request.get_json()
     return_value = 'pass'
+
+    print(str(content))
+
     for key, value in content.items():
-        # print("hit bird intake")
+        print("hit bird intake")
         if key == 'request_type':
             if value == "bird1":
+                print("hit value == bird1")
                 for key, value in content.items():
                     if key == "payload":
-                        print("bird1: "+str(value))
-                        operationCenter = OperationCenter()
-                        operationCenter.goldenGooseProcess(value)
+                        print("key == payload")
+                        for key, value in value.items():
+                            if key == "data":
+                                print("internal bird API")
 
+                                print("bird1: " + str(value))
+                                # print("bird: "+str(value.data))
+                                operationCenter = OperationCenter()
+                                operationCenter.goldenGooseProcess(value)
     return "Query received"
 
 @app.route('/test1', methods=['POST'])
@@ -44,7 +53,8 @@ def test():
                         for value in value:
                             print(str(value))
                             for value in value:
-                                print (value)
+                                print(value)
+
                         # operationCenter = OperationCenter()
                         # operationCenter.goldenGooseProcess(value)
 

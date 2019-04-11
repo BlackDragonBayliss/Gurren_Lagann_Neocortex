@@ -6,6 +6,7 @@ class DynamaTransit:
         self.observanceObjectResultsComposite = []
 
     def goldenGooseProcessIntake(self, operationCenter, listOfMetrics):
+        print("hit goldenGooseProcessIntake")
         self.goldenGooseDeterminer = GoldenGooseDeterminer()
         self.goldenGooseDeterminer.processGoldenGeese(operationCenter, listOfMetrics)
 

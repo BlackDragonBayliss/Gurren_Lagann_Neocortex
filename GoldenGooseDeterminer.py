@@ -18,15 +18,56 @@ class GoldenGooseDeterminer:
 
 
     def processGoldenGeese(self, operationCenter, listRawGeeseMetrics):
+        print("hit processGoldenGeese")
         # self.refreshHardMetrics()
         print("listRawGeeseMetrics: "+ str(listRawGeeseMetrics))
-        listFilteredGeeseMetrics = [[listRawGeeseMetrics[0],listRawGeeseMetrics[1],2.03, #listRawGeeseMetrics[2],
-                                     listRawGeeseMetrics[3],listRawGeeseMetrics[4]],
-                                    [listRawGeeseMetrics[5],listRawGeeseMetrics[6], 2.02,#listRawGeeseMetrics[7],
-                                     listRawGeeseMetrics[8],listRawGeeseMetrics[9]],
-                                    [listRawGeeseMetrics[10],listRawGeeseMetrics[11],2.01,#listRawGeeseMetrics[12],
-                                     listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
+        listOfGooseMetricLists = []
+
+        processIndex = 0
+        for rawGoose in listRawGeeseMetrics:
+            listToBeAdded = []
+            for key, value in rawGoose.items():
+                if (key == "symbol"):
+                    print("symbol" + str(value))
+                    listToBeAdded.append(value)
+
+            for key, value in rawGoose.items():
+                if (key == "pchg"):
+                    print("pchg" + str(value))
+                    listToBeAdded.append(value)
+
+            for key, value in rawGoose.items():
+                if (key == "bid"):
+                    print("bid" + str(value))
+                    if(processIndex == 0):
+                        listToBeAdded.append(2.03)
+                        break
+                    if (processIndex == 1):
+                        listToBeAdded.append(2.02)
+                        break
+                    if (processIndex == 2):
+                        listToBeAdded.append(2.01)
+                        break
+                    listToBeAdded.append(value)
+            processIndex += 1
+
+            listOfGooseMetricLists.append(listToBeAdded)
+
+
+        print(str(listOfGooseMetricLists))
+
+        for gooseMetricList in listOfGooseMetricLists:
+            print(gooseMetricList)
+        # listOfGooseMetricLists[]
+
+        #bridge gapping of information
+        # listFilteredGeeseMetrics = [[listRawGeeseMetrics[0],listRawGeeseMetrics[1],2.03, #listRawGeeseMetrics[2],
+        #                              listRawGeeseMetrics[3],listRawGeeseMetrics[4]],
+        #                             [listRawGeeseMetrics[5],listRawGeeseMetrics[6], 2.02,#listRawGeeseMetrics[7],
+        #                              listRawGeeseMetrics[8],listRawGeeseMetrics[9]],
+        #                             [listRawGeeseMetrics[10],listRawGeeseMetrics[11],2.01,#listRawGeeseMetrics[12],
+        #                              listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
 
         #Succesful list, initial criteria met
