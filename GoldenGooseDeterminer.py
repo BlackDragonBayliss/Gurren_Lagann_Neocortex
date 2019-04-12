@@ -69,53 +69,57 @@ class GoldenGooseDeterminer:
         #                             [listRawGeeseMetrics[10],listRawGeeseMetrics[11],2.01,#listRawGeeseMetrics[12],
         #                              listRawGeeseMetrics[13], listRawGeeseMetrics[14]]]
 
-
         #Succesful list, initial criteria met
-        listSuccessfulGeeseMetrics = []
-        for filteredGeeseMetrics in listFilteredGeeseMetrics:
+        listPrioritizedGeeseMetrics = []
+        for filteredGeeseMetrics in listOfGooseMetricLists:
             if(self.isGoldenGoose(filteredGeeseMetrics)):
-                listSuccessfulGeeseMetrics.append([filteredGeeseMetrics, 1])
+                listPrioritizedGeeseMetrics.append([filteredGeeseMetrics, 1])
             else:
-                listSuccessfulGeeseMetrics.append([filteredGeeseMetrics, 0])
+                listPrioritizedGeeseMetrics.append([filteredGeeseMetrics, 0])
 
 
+        #
+        #Begin transfusion process, multi-variant support. Dynamic addition of items.
+        #
+        #
 
         #Priority highest DM, extend all others, fixed priority MM handle, check priority 11
-        listSuccessfulGeeseMetrics = self.compareGeesePrices(listSuccessfulGeeseMetrics)
+        listPrioritizedGeeseMetrics = self.compareGeesePrices(listPrioritizedGeeseMetrics)
 
-        operationCenter.setListGoldenGeese(listSuccessfulGeeseMetrics)
+        operationCenter.setListGoldenGeese(listPrioritizedGeeseMetrics)
         print("List flying geese: " + str(operationCenter.getListGoldenGeese()))
 
         # Isolate if determined
-        isChosenDetermined = self.calculateIsChosenDetermined(listSuccessfulGeeseMetrics)
+        isChosenDetermined = self.calculateIsChosenDetermined(listPrioritizedGeeseMetrics)
 
         print("isChosenDetermined: "+ str(isChosenDetermined))
         # response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined,"POP",0,"DOG",1,"MOM", 0)
-        print("listSuccessfulGeeseMetrics :" + str(listSuccessfulGeeseMetrics))
-        sublist1 = listSuccessfulGeeseMetrics[0]
-        sublist2 = listSuccessfulGeeseMetrics[1]
-        sublist3 = listSuccessfulGeeseMetrics[2]
-        sublistSymbol1 = sublist1[0][0]
-        sublistSymbol2 = sublist2[0][0]
-        sublistSymbol3 = sublist3[0][0]
-        sublistPriority1 = sublist1[1]
-        sublistPriority2 = sublist2[1]
-        sublistPriority3 = sublist3[1]
+        print("listPrioritizedGeeseMetrics :" + str(listPrioritizedGeeseMetrics))
 
 
-        print("sublist: " + str(sublistSymbol1) + str(sublistPriority1))
+
+        # sublist1 = listPrioritizedGeeseMetrics[0]
+        # sublist2 = listPrioritizedGeeseMetrics[1]
+        # sublist3 = listPrioritizedGeeseMetrics[2]
+        #
+        #
+        # sublistSymbol1 = sublist1[0][0]
+        # sublistSymbol2 = sublist2[0][0]
+        # sublistSymbol3 = sublist3[0][0]
+        # sublistPriority1 = sublist1[1]
+        # sublistPriority2 = sublist2[1]
+        # sublistPriority3 = sublist3[1]
+
+
+        print("sublist: " + str(sublistSymbol1) +" "+ str(sublistPriority1))
         # print("sublist: "+str(sublist2[0][0]))
         # print("sublist: " + str(sublist3[0][0]))
 
-
-        #Frankly bayliss remember alt reality and reaching it twice as fast.
-        #Remember in your alt reality they are your friend.
-
-        # print("listSuccessfulGooseMetrics[0][1] :"+str(listSuccessfulGooseMetrics[0][1]))
-        # print("listSuccessfulGooseMetrics[0][0] :"+str(listSuccessfulGooseMetrics[0][0]))
-        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, sublistSymbol1, sublistPriority1,
-                                                            sublistSymbol2, sublistPriority2,
-                                                            sublistSymbol3, sublistPriority3)
+        #Handle list binding in JSON
+        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, listPrioritizedGeeseMetrics)
+            # isChosenDetermined, sublistSymbol1, sublistPriority1,
+            #                                                 sublistSymbol2, sublistPriority2,
+            #                                                 sublistSymbol3, sublistPriority3)
 
 
     def compareGeesePrices(self, listSuccessfulGeeseMetrics):
