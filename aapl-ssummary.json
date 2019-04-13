@@ -56,3 +56,130 @@
         response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, sublistSymbol1, sublistPriority1,
                                                             sublistSymbol2, sublistPriority2,
                                                             sublistSymbol3, sublistPriority3)
+
+Here the stand is made.
+
+
+
+
+Now what to Handle data manager creation. 
+Handle multi-variant support for data_managers in MM.
+
+We are intaking information, and passed through API... of MM.
+Now handle further.
+
+Intake golden goose multi-variant support
+All of existence all at once, all of existence in a paper cup.
+
+Where in MM is it still static
+
+Error:
+tag_data_managers
+
+Why is GG report still static, 3 reports...
+Well there are only top three right now in report makes sense,
+Consecutive attempts will show more running data_managers
+
+----
+Why string wrapping of list to be added...
+Intake at Node, why becoming string there,
+or at Neo posting.
+golden_goose_report: {'_id': '5cb21fa410cb536734835dff', 'dateCreated': '04/13/2019', 'isChosenDetermined': '1', 
+'dataList': ["[['PCG', '20.65', 2.03], 2]", "[['APC', '32.01', 2.02], 1]", "[['JMIA', '34.35', 2.01], 1]"], 
+'epochCreated': '1555177380', '__v': 0}
+
+self.listValues?
+
+isContinueOperations = int(stock_observance_rotation_manager.intake_query(golden_goose_report))
+
+Handle intake_query.
+All existence all at once, all existence in a papercup.
+
+
+listRawGeeseMetrics: [{'_id': '5cb22ae0cd4c446a3c3f0146', 'second_created': '56', 'minute_created': '30', 'hour_created': '12', 'epoch_created': '1555180256', 'ask': '0.00', 'bid': '0.00', 'pchg': '20.65', 'last': '23.08', 'symbol': 'PCG'}, {'_id': '5cb22ae0cd4c446a3c3f0147', 'second_created': '56', 'minute_created': '30', 'hour_created': '12', 'epoch_created': '1555180256', 'ask': '0.00', 'bid': '0.00', 'pchg': '32.01', 'last': '61.78', 'symbol': 'APC'}, {'_id': '5cb22ae0cd4c446a3c3f0145', 'second_created': '56', 'minute_created': '30', 'hour_created': '12', 'epoch_created': '1555180256', 'ask': '0.0000', 'bid': '0.0000', 'pchg': '34.35', 'last': '25.4600', 'symbol': 'JMIA'}]
+
+"dataList": [[['PCG', '20.65', 2.03], 2], [['APC', '32.01', 2.02], 1], [['JMIA', '34.35', 2.01], 1]],
+
+JSON: {'request_type': 'intakeGoldenGooseResultStore', 'isChosenDetermined': 1, 'listPrioritizedGeeseMetrics': [[['PCG', 20.65, 2.03], 2], [['APC', 32.01, 2.02], 1], [['JMIA', 34.35, 2.01], 1]]}
+
+I dont buy into it.
+
+
+if key == 'data_list':
+    dataList = value
+    self.list_values = dataList
+    print("data_list: "+str(self.list_values))
+
+Verify list_values now, what did it hold before the transition
+
+postGoldenGooseResult still acting up.
+console.log("intakeGoldenGooseResultStore: "+req.body);
+
+Verify storage of GGResults.
+
+
+
+Stroing data_list as list without string creation.
+Mongoose store list of lists without turning them to string.
+Or, split string into values, take values and add to list. 
+Then send list in JSON request.
+
+I just want to save a list of list objects....
+OR create data_list objects to store, like day_sets.
+
+
+postToPythonBird1: { _id: 5cb25d0c396a956d29a00f77,
+  day_created: '04/13/2019',
+  is_chosen_determined: '1',
+  epoch_created: '1555193101',
+  __v: 0,
+  data_list: 
+   [ '[[\'PCG\', 20.65, 2.03], 2]',
+     '[[\'JMIA\', 34.35, 2.02], 1]',
+     '[[\'APC\', 32.01, 2.01], 1]' ] }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

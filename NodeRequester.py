@@ -35,12 +35,21 @@ class NodeRequester:
         return response
 
     def postGoldenGooseResult(self, isChosenDetermined, listPrioritizedGeeseMetrics):
-        response = self.postRequest(
-            {
+        json = {
                 "request_type": "intakeGoldenGooseResultStore",
                 "isChosenDetermined": isChosenDetermined,
                 "listPrioritizedGeeseMetrics": listPrioritizedGeeseMetrics
-            })
+            }
+        print("JSON: "+str(json))
+
+        response = self.postRequest(
+            json
+            # {
+            #     "request_type": "intakeGoldenGooseResultStore",
+            #     "isChosenDetermined": isChosenDetermined,
+            #     "listPrioritizedGeeseMetrics": listPrioritizedGeeseMetrics
+            # }
+        )
         return response
 
 

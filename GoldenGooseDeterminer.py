@@ -29,13 +29,15 @@ class GoldenGooseDeterminer:
             listToBeAdded = []
             for key, value in rawGoose.items():
                 if (key == "symbol"):
-                    print("symbol" + str(value))
-                    listToBeAdded.append(value)
+                    valueEntering = str(value)
+                    print("symbol " + valueEntering)
+                    listToBeAdded.append(valueEntering)
 
             for key, value in rawGoose.items():
                 if (key == "pchg"):
-                    print("pchg" + str(value))
-                    listToBeAdded.append(value)
+                    valueEntering = float(value)
+                    print("pchg " + str(valueEntering))
+                    listToBeAdded.append(valueEntering)
 
             for key, value in rawGoose.items():
                 if (key == "bid"):
@@ -111,12 +113,15 @@ class GoldenGooseDeterminer:
         # sublistPriority3 = sublist3[1]
 
 
-        print("sublist: " + str(sublistSymbol1) +" "+ str(sublistPriority1))
+        # print("sublist: " + str(sublistSymbol1) +" "+ str(sublistPriority1))
         # print("sublist: "+str(sublist2[0][0]))
         # print("sublist: " + str(sublist3[0][0]))
 
+
+
         #Handle list binding in JSON
         response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, listPrioritizedGeeseMetrics)
+
             # isChosenDetermined, sublistSymbol1, sublistPriority1,
             #                                                 sublistSymbol2, sublistPriority2,
             #                                                 sublistSymbol3, sublistPriority3)
