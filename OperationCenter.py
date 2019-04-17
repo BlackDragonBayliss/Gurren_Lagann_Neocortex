@@ -28,9 +28,23 @@ class OperationCenter:
         self.perpetual_timer.setup_timer_stock(1, 1000000, self.main_loop, 'main_process_loop')
 
     def main_loop(self):
-        #Update Data_Decision_Process_Action_Manager with chosen stocks
-        self.event_trigger_top_stock_gather_process_phase_one()
-        self.is_condition_top_stock_pull_gather = True
+        #Handle loop, check time, if time 10:30 initiate time process.
+        if (self.calculate_time_delimiter_initiate_buy_process()):
+            self.initiate_buy_process()
+
+    def calculate_time_delimiter_initiate_buy_process(self):
+        print(self.time_manager.get_current_hour())
+        if(self.time_manager.get_current_hour() == self.scrape_hour):
+            if (self.time_manager.get_current_minute() == self.scrape_minute):
+                return True
+        return False
+
+    def initiate_buy_process(self):
+        #Buy trade process
+        #Bird to node
+        self.nodeRequester.postBuyBreachWatch()
+
+
 
     def goldenGooseProcess(self, data):
         listGeeseMetrics = []

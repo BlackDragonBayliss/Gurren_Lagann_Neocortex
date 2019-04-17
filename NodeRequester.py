@@ -44,13 +44,19 @@ class NodeRequester:
 
         response = self.postRequest(
             json
-            # {
-            #     "request_type": "intakeGoldenGooseResultStore",
-            #     "isChosenDetermined": isChosenDetermined,
-            #     "listPrioritizedGeeseMetrics": listPrioritizedGeeseMetrics
-            # }
         )
         return response
+
+    def postBuyBreachWatch(self):
+        json = {
+                "request_type": "breachWatchBuy"
+            }
+        response = self.postRequest(
+            json
+        )
+        return response
+
+
 
 
     def postRequest(self, jsonData):

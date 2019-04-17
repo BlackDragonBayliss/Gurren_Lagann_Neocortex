@@ -117,10 +117,27 @@ class GoldenGooseDeterminer:
         # print("sublist: "+str(sublist2[0][0]))
         # print("sublist: " + str(sublist3[0][0]))
 
+        fullListPrioritizedGeeseMetrics = []
+
+        # listPrioritizedGeeseMetrics = []
+        for filteredGeeseMetrics in listPrioritizedGeeseMetrics:
+            fullListPrioritizedGeeseMetrics.append(filteredGeeseMetrics[0][0])
+
+            fullListPrioritizedGeeseMetrics.append(filteredGeeseMetrics[0][1])
+            fullListPrioritizedGeeseMetrics.append(filteredGeeseMetrics[0][2])
+
+            fullListPrioritizedGeeseMetrics.append(filteredGeeseMetrics[1])
+
+        print(fullListPrioritizedGeeseMetrics)
+            # if (self.isGoldenGoose(filteredGeeseMetrics)):
+            #     listPrioritizedGeeseMetrics.append([filteredGeeseMetrics, 1])
+            # else:
+            #     listPrioritizedGeeseMetrics.append([filteredGeeseMetrics, 0])
+
 
 
         #Handle list binding in JSON
-        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, listPrioritizedGeeseMetrics)
+        response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined, fullListPrioritizedGeeseMetrics)
 
             # isChosenDetermined, sublistSymbol1, sublistPriority1,
             #                                                 sublistSymbol2, sublistPriority2,
