@@ -83,7 +83,6 @@ class GoldenGooseDeterminer:
         #
         #Begin transfusion process, multi-variant support. Dynamic addition of items.
         #
-        #
 
         #Priority highest DM, extend all others, fixed priority MM handle, check priority 11
         listPrioritizedGeeseMetrics = self.compareGeesePrices(listPrioritizedGeeseMetrics)
@@ -97,25 +96,6 @@ class GoldenGooseDeterminer:
         print("isChosenDetermined: "+ str(isChosenDetermined))
         # response = self.nodeRequester.postGoldenGooseResult(isChosenDetermined,"POP",0,"DOG",1,"MOM", 0)
         print("listPrioritizedGeeseMetrics :" + str(listPrioritizedGeeseMetrics))
-
-
-
-        # sublist1 = listPrioritizedGeeseMetrics[0]
-        # sublist2 = listPrioritizedGeeseMetrics[1]
-        # sublist3 = listPrioritizedGeeseMetrics[2]
-        #
-        #
-        # sublistSymbol1 = sublist1[0][0]
-        # sublistSymbol2 = sublist2[0][0]
-        # sublistSymbol3 = sublist3[0][0]
-        # sublistPriority1 = sublist1[1]
-        # sublistPriority2 = sublist2[1]
-        # sublistPriority3 = sublist3[1]
-
-
-        # print("sublist: " + str(sublistSymbol1) +" "+ str(sublistPriority1))
-        # print("sublist: "+str(sublist2[0][0]))
-        # print("sublist: " + str(sublist3[0][0]))
 
         fullListPrioritizedGeeseMetrics = []
 
