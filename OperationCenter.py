@@ -39,6 +39,24 @@ class OperationCenter:
                 return True
         return False
 
+    def breachBuy(self, stringQuery):
+        print(stringQuery)
+
+        #totalsecurities
+
+        #after purchase and wait 10 seconds, holdings string
+        isHoldings = "1"
+        #if positions found, continue operations - breach sell.
+        if(isHoldings == "1"):
+            print("")
+        #else cancel operations.
+        else:
+            print("cancel operations")
+
+        #get if trade was successful, wait 10 seconds
+
+
+
     def initiate_buy_process(self):
         #Buy trade process
         #Bird to node
