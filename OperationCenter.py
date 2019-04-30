@@ -8,6 +8,7 @@ from DataDisplayer import DataDisplayer
 from TimeManager import TimeManager
 from DynamaTransit import DynamaTransit
 from TypeConverter import TypeConverter
+from PerpetualTimer import PerpetualTimer
 
 class OperationCenter:
     def __init__(self):
@@ -20,6 +21,8 @@ class OperationCenter:
         self.timeManager = TimeManager()
         self.dynamaTransit = DynamaTransit()
         self.typeConverter = TypeConverter()
+        self.perpetualTimer = PerpetualTimer()
+        self.isHoldings = "0"
 
     def process_main_process_loop(self):
         self.main_process_loop()
@@ -41,19 +44,43 @@ class OperationCenter:
 
     def breachBuy(self, stringQuery):
         print(stringQuery)
-
         #totalsecurities
-
         #after purchase and wait 10 seconds, holdings string
-        isHoldings = "1"
+        listResults = self.typeConverter.parseHoldingQueryString(stringQuery)
+        quantityOfShares = listResults[1]
+
+        # amountOfShares
+        print("quantityOfShares: "+quantityOfShares)
+        if(quantityOfShares != "0"):
+            self.isHoldings = "1"
+
         #if positions found, continue operations - breach sell.
-        if(isHoldings == "1"):
-            print("")
+        if(self.isHoldings == "1"):
+            print("isHoldings: true")
+            #Continue operations
+            self.quantityOfShares = quantityOfShares
+            self.totalSecurities = listResults[0]
+            print(self.quantityOfShares + " "+self.totalSecurities)
+
+            #set monitor stocks on loop, for sell process
+            #handle looped query, get latest stock from node
+            self.initiateSellBreachProcess()
+
         #else cancel operations.
         else:
             print("cancel operations")
+            #Support for reiterate chosen process
 
-        #get if trade was successful, wait 10 seconds
+    def initiateSellBreachProcess(self):
+        print("begin sell process")
+        self.perpetualTimer.setup_timer_stock(1, 5000, self.getStockInformation, 'getStockInformation')
+
+    def getStockInformation(self):
+        print("getting stock")
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        response = loop.run_until_complete(httpUtility.async_get_stock_query())
+
 
 
 
@@ -61,7 +88,6 @@ class OperationCenter:
         #Buy trade process
         #Bird to node
         self.nodeRequester.postBuyBreachWatch()
-
 
 
     def goldenGooseProcess(self, data):

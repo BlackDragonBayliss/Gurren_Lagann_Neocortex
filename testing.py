@@ -45,11 +45,16 @@
 # print(x.day)
 # print(x.strftime("%Y-%m-%d %H:%M:%S"))
 
-from TimeManager import TimeManager
+# from TimeManager import TimeManager
+#
+# tm = TimeManager()
+#
+# print(tm.getCurrentDateObjectList())
 
-tm = TimeManager()
+amount = None
+if(amount):
+    print(amount)
 
-print(tm.getCurrentDateObjectList())
 
 
 # >>> from time import gmtime, strftime

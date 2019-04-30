@@ -187,6 +187,23 @@ class TypeConverter:
 
         return DM_Buy_instance
 
+    def parseHoldingQueryString(self, str_to_parse):
+        #Will accept and parse stock query.
+        #Store last, bid
+
+        data_set_group_1_2 = str_to_parse.split('<totalsecurities>');
+        data_set_group_2_2 = str_to_parse.split('<qty>');
+        #
+        data_set_group_1_3 = data_set_group_1_2[1].split('</totalsecurities');
+        data_set_group_2_3 = data_set_group_2_2[1].split('</qty');
+
+
+        totalSecurities = data_set_group_1_3[0]
+        quantityOfShares = data_set_group_2_3[0]
+        listResults = [totalSecurities, quantityOfShares]
+        return listResults
+
+
     def parse_DM_Action(self, str_to_parse, DM_Action_instance):
         data_set_group_1_2 = str_to_parse.split('<symbol>');
         data_set_group_2_2 = str_to_parse.split('<pchg>');

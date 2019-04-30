@@ -33,7 +33,6 @@ def recordQueries():
                         for key, value in value.items():
                             if key == "data":
                                 print("internal bird API")
-
                                 print("bird1: " + str(value))
                                 # print("bird: "+str(value.data))
                                 operationCenter = OperationCenter()
@@ -44,21 +43,19 @@ def recordQueries():
 def breachBuy():
     content = request.get_json()
     return_value = 'pass'
-
     print(str(content))
-
     for key, value in content.items():
-        print("hit bird intake")
+        print("hit breachBuy intake")
         if key == 'request_type':
-            if value == "bird1":
-                print("hit value == bird1")
+            if value == "breachBuy":
+                print("hit value == breachBuy")
                 for key, value in content.items():
                     if key == "payload":
                         print("key == payload")
                         for key, value in value.items():
                             if key == "data":
-                                print("internal bird API")
-                                print("bird1: " + str(value))
+                                print("internal breachBuy API")
+                                print("breachBuy: " + str(value))
                                 # print("bird: "+str(value.data))
                                 operationCenter = OperationCenter()
                                 operationCenter.breachBuy(value)
