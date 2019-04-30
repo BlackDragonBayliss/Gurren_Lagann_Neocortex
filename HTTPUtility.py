@@ -2,21 +2,22 @@
 import aiohttp
 import asyncio
 from threading import Thread
-# from Request_Factory import Request_Factory
-# from Thread_Task import Thread_Task
 class HTTPUtility:
     def __init__(self,):
         self.name = ''
-        self.request_factory = Request_Factory()
 
     async def fetch(self,session, url, data):
         async with session.post(url, data=data) as response:
             return await response.text()
 
 # TSP Gather process
-    async def async_get_stock_query(self,requestFactory):
+    async def async_get_stock_query(self, symbol):
         async with aiohttp.ClientSession() as session:
-            jsonRequest = requestFactory.lookup_top_stocks_phase_internal()
+            jsonRequest = {
+                "request_type": "breachWatch",
+                "isGetLatestStock": 1,
+                "stock_symbol": symbol
+            }
             url = 'http://localhost:3000/api/brokerage'
             responseReturned = await self.fetch(session, url, jsonRequest)
             return responseReturned

@@ -189,8 +189,6 @@ class TypeConverter:
 
     def parseHoldingQueryString(self, str_to_parse):
         #Will accept and parse stock query.
-        #Store last, bid
-
         data_set_group_1_2 = str_to_parse.split('<totalsecurities>');
         data_set_group_2_2 = str_to_parse.split('<qty>');
         #
@@ -202,6 +200,35 @@ class TypeConverter:
         quantityOfShares = data_set_group_2_3[0]
         listResults = [totalSecurities, quantityOfShares]
         return listResults
+
+    def parseBreachStockQueryString(self, str_to_parse):
+        #Will accept and parse stock query.
+        # data_set_group_1_2 = str_to_parse.split('<symbol>');
+        data_set_group_2_2 = str_to_parse.split('<pchg>');
+        data_set_group_3_2 = str_to_parse.split('<pcls>');
+        data_set_group_4_2 = str_to_parse.split('<last>');
+        data_set_group_5_2 = str_to_parse.split('<bid>');
+        data_set_group_6_2 = str_to_parse.split('<ask>');
+
+        # data_set_group_1_3 = data_set_group_1_2[1].split('</symbol');
+        data_set_group_2_3 = data_set_group_2_2[1].split('</pchg');
+        data_set_group_3_3 = data_set_group_3_2[1].split('</pcls');
+        data_set_group_4_3 = data_set_group_4_2[1].split('</last');
+        data_set_group_5_3 = data_set_group_5_2[1].split('</bid');
+        data_set_group_6_3 = data_set_group_6_2[1].split('</ask');
+
+
+        # totalSecurities = data_set_group_1_3[0]
+        pchg = data_set_group_2_3[0]
+        pcls = data_set_group_3_3[0]
+        last = data_set_group_4_3[0]
+        bid = data_set_group_5_3[0]
+        ask = data_set_group_6_3[0]
+
+
+        listResults = [pchg, pcls, last, bid, ask]
+        return listResults
+
 
 
     def parse_DM_Action(self, str_to_parse, DM_Action_instance):

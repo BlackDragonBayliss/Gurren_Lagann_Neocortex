@@ -9,6 +9,7 @@ from TimeManager import TimeManager
 from DynamaTransit import DynamaTransit
 from TypeConverter import TypeConverter
 from PerpetualTimer import PerpetualTimer
+from HTTPUtility import HTTPUtility
 
 class OperationCenter:
     def __init__(self):
@@ -22,6 +23,7 @@ class OperationCenter:
         self.dynamaTransit = DynamaTransit()
         self.typeConverter = TypeConverter()
         self.perpetualTimer = PerpetualTimer()
+        self.httpUtility = HTTPUtility()
         self.isHoldings = "0"
 
     def process_main_process_loop(self):
@@ -73,14 +75,21 @@ class OperationCenter:
 
     def initiateSellBreachProcess(self):
         print("begin sell process")
-        self.perpetualTimer.setup_timer_stock(1, 5000, self.getStockInformation, 'getStockInformation')
+        self.perpetualTimer.setup_timer_stock(1, 8000, self.getStockInformation, 'getStockInformation')
 
     def getStockInformation(self):
         print("getting stock")
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-        response = loop.run_until_complete(httpUtility.async_get_stock_query())
+        response = loop.run_until_complete(self.httpUtility.async_get_stock_query("VICI"))
 
+        #Handle test information vici stats, parse stats into variables
+        print(response)
+
+        listResults = self.typeConverter.parseBreachStockQueryString(response)
+        print(listResults[0] + " " +listResults[1] + " " + listResults[2])
+
+        # parseResponse =
 
 
 
