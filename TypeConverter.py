@@ -217,16 +217,15 @@ class TypeConverter:
         data_set_group_5_3 = data_set_group_5_2[1].split('</bid');
         data_set_group_6_3 = data_set_group_6_2[1].split('</ask');
 
-
         # totalSecurities = data_set_group_1_3[0]
-        pchg = data_set_group_2_3[0]
-        pcls = data_set_group_3_3[0]
-        last = data_set_group_4_3[0]
-        bid = data_set_group_5_3[0]
-        ask = data_set_group_6_3[0]
-
+        pchg = float(data_set_group_2_3[0])
+        pcls = float(data_set_group_3_3[0])
+        last = float(data_set_group_4_3[0])
+        bid = float(data_set_group_5_3[0])
+        ask = float(data_set_group_6_3[0])
 
         listResults = [pchg, pcls, last, bid, ask]
+
         return listResults
 
 

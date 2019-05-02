@@ -10,14 +10,17 @@ class PerpetualTimer():
 
    def __init__(self):
       self.currentCount = 0
+      self.isInitiated = "0"
 
    def setup_timer_stock(self, delay, countToEnd, functionToInvoke, name):
         self.delay = delay
         self.countToEnd = countToEnd
         self.functionToInvoke = functionToInvoke
-        self.stopped = Event();
-        self.name = name;
+        self.stopped = Event()
+        self.name = name
         self.thread =  Thread(target=self.__run, args=(),name=self.name)
+
+        self.isInitiated = "1"
         #
         self.thread.start()
 
@@ -25,9 +28,9 @@ class PerpetualTimer():
        self.delay = delay
        self.countToEnd = countToEnd
        self.functionToInvoke = functionToInvoke
-       self.stopped = Event();
-       self.name = name;
-       self.list_objects();
+       self.stopped = Event()
+       self.name = name
+       self.list_objects()
        self.thread = Thread(target=self.__run, args=(list_objects), name=self.name)
        #
        self.thread.start()
@@ -38,5 +41,5 @@ class PerpetualTimer():
 
    def cancel(self):
       # self.thread.cancel()
-      print("quiting pep timer: "+self.name)
+      # print("quiting pep timer: "+self.name)
       self.stopped.set()

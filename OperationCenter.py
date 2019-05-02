@@ -12,7 +12,12 @@ from PerpetualTimer import PerpetualTimer
 from HTTPUtility import HTTPUtility
 
 class OperationCenter:
-    def __init__(self):
+    __instance = None
+    perpetualTimerSellBreachWatch = PerpetualTimer()
+    def __new__(self):
+        if self.__instance == None:
+            self.__instance = object.__new__(self)
+            self.__instance.name = ''
         self.list_chosen_data_managers = []
         self.chosen_stock_temp_container = []
         self.listGoldenGeese = []
@@ -22,9 +27,13 @@ class OperationCenter:
         self.timeManager = TimeManager()
         self.dynamaTransit = DynamaTransit()
         self.typeConverter = TypeConverter()
-        self.perpetualTimer = PerpetualTimer()
+
         self.httpUtility = HTTPUtility()
         self.isHoldings = "0"
+        self.boughtStockSymbol = "JKJKJKJK"
+        self.isSellDelimiterMet = "0"
+        return self.__instance
+
 
     def process_main_process_loop(self):
         self.main_process_loop()
@@ -43,6 +52,19 @@ class OperationCenter:
             if (self.time_manager.get_current_minute() == self.scrape_minute):
                 return True
         return False
+
+
+    def breachSellHoldings(self, holdings):
+        #Verify that holdings have been sold
+        listResults = self.typeConverter.parseHoldingQueryString(holdings)
+        print("breachSellHoldings "+listResults[1])
+
+        if(listResults[1] != 0):
+            print("canceling perpetualTimerSellBreachWatch")
+            self.perpetualTimerSellBreachWatch.cancel()
+
+
+
 
     def breachBuy(self, stringQuery):
         print(stringQuery)
@@ -75,7 +97,7 @@ class OperationCenter:
 
     def initiateSellBreachProcess(self):
         print("begin sell process")
-        self.perpetualTimer.setup_timer_stock(1, 8000, self.getStockInformation, 'getStockInformation')
+        self.perpetualTimerSellBreachWatch.setup_timer_stock(1, 3000, self.getStockInformation, 'getStockInformation')
 
     def getStockInformation(self):
         print("getting stock")
@@ -87,10 +109,27 @@ class OperationCenter:
         print(response)
 
         listResults = self.typeConverter.parseBreachStockQueryString(response)
-        print(listResults[0] + " " +listResults[1] + " " + listResults[2])
+        # print(listResults[0] + " " + listResults[1] + " " + listResults[2] + " " + listResults[3] + " " + listResults[4])
 
-        # parseResponse =
+        #test boughtPrice
+        boughtPrice =  29.72
+        self.checkDelimiterMet(listResults,boughtPrice)
 
+    def checkDelimiterMet(self, listResults, delimiter):
+        #Current bought
+        #listResults = [pchg, pcls, last, bid, ask]
+        #delimiter met do sell
+        if(listResults[2] == delimiter and self.isSellDelimiterMet == "0"):
+            print("DELIMITER MET")
+            #Sell post
+            self.isSellDelimiterMet = "1"
+            self.sellPost(self.boughtStockSymbol)
+
+
+    def sellPost(self,symbol):
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        response = loop.run_until_complete(self.httpUtility.async_breach_sell(symbol))
 
 
     def initiate_buy_process(self):
@@ -173,3 +212,15 @@ class OperationCenter:
         self.listGoldenGeese = listGoldenGeese
     def getListGoldenGeese(self):
         return self.listGoldenGeese
+
+
+    # def test1(self):
+    #     # print("hit")
+    #     self.perpetualTimerSellBreachWatch.setup_timer_stock(1, 3000, self.testSign, 'getStockInformation')
+    #
+    # def testSign(self):
+    #     print("testSign")
+    #     print(self.perpetualTimerSellBreachWatch.isInitiated)
+    #
+    # def test2(self):
+    #     self.perpetualTimerSellBreachWatch.cancel()

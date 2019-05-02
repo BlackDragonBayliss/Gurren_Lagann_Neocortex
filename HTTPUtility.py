@@ -10,6 +10,19 @@ class HTTPUtility:
         async with session.post(url, data=data) as response:
             return await response.text()
 
+    async def async_breach_sell(self, symbol):
+        async with aiohttp.ClientSession() as session:
+            jsonRequest = {
+                "request_type": "breachWatch",
+                "breachSell": 1,
+                "stock_symbol": symbol
+            }
+            url = 'http://localhost:3000/api/brokerage'
+            responseReturned = await self.fetch(session, url, jsonRequest)
+            return responseReturned
+
+
+
 # TSP Gather process
     async def async_get_stock_query(self, symbol):
         async with aiohttp.ClientSession() as session:

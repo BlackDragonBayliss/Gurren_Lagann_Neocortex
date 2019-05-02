@@ -51,10 +51,34 @@
 #
 # print(tm.getCurrentDateObjectList())
 
-amount = None
-if(amount):
-    print(amount)
 
+
+from PerpetualTimer import PerpetualTimer
+
+
+class Awesome:
+
+    # self.internalIteration = 0
+
+    def __init__(self):
+        self.internalIteration = 0
+        self.perpetualTimerSellBreachWatch = PerpetualTimer()
+
+    def sweet(self):
+        print("sweet: "+str(self.internalIteration))
+
+        if(self.internalIteration == 2):
+            print("cancelling")
+            self.perpetualTimerSellBreachWatch.cancel()
+
+        self.internalIteration += 1
+
+    def createPepTimer(self):
+
+        self.perpetualTimerSellBreachWatch.setup_timer_stock(2, 3000, self.sweet, 'getStockInformation')
+
+awesome = Awesome()
+awesome.createPepTimer()
 
 
 # >>> from time import gmtime, strftime

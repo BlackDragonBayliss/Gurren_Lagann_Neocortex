@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 def __new__(self):
-    pass
+    self.operationCenter = OperationCenter()
 
 @app.route('/initSystem', methods=['POST'])
 def init_system():
@@ -61,23 +61,56 @@ def breachBuy():
                                 operationCenter.breachBuy(value)
     return "Query received"
 
+@app.route('/breachSell', methods=['POST'])
+def breachSell():
+    content = request.get_json()
+    return_value = 'pass'
+    print(str(content))
+    for key, value in content.items():
+        print("hit breachSell intake")
+        if key == 'request_type':
+            if value == "breachSell":
+                print("hit value == breachSell")
+                for key, value in content.items():
+                    if key == "payload":
+                        print("key == payload")
+                        for key, value in value.items():
+                            if key == "data":
+                                print("internal breachSell API")
+                                print("breachSell: " + str(value))
+                                # print("bird: "+str(value.data))
+                                operationCenter = OperationCenter()
+                                operationCenter.breachSellHoldings(value)
+    return "Query received"
+
 @app.route('/test1', methods=['POST'])
-def test():
+def test1():
     content = request.get_json()
     for key, value in content.items():
-        print("hit bird intake")
+        # print("hit bird intake")
         if key == 'request_type':
-            if value == "test1":
-                for key, value in content.items():
-                    if key == "list_of_list_of_crap":
+            if value == "test":
+                # for key, value in content.items():
+                #     if key == "list_of_list_of_crap":
                         # print(str(value))
-                        for value in value:
-                            print(str(value))
-                            for value in value:
-                                print(value)
+                        # for value in value:
+                        #     print(str(value))
+                        #     for value in value:
+                        #         print(value)
+                operationCenter = OperationCenter()
+                operationCenter.test1()
 
-                        # operationCenter = OperationCenter()
-                        # operationCenter.goldenGooseProcess(value)
+    return "Query received"
+
+@app.route('/test2', methods=['POST'])
+def test2():
+    content = request.get_json()
+    for key, value in content.items():
+        # print("hit bird intake")
+        if key == 'request_type':
+            if value == "test":
+                operationCenter = OperationCenter()
+                operationCenter.test2()
 
     return "Query received"
 
