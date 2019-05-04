@@ -76,9 +76,7 @@ def breachSell():
                         print("key == payload")
                         for key, value in value.items():
                             if key == "data":
-                                print("internal breachSell API")
-                                print("breachSell: " + str(value))
-                                # print("bird: "+str(value.data))
+                                #intake holdings post
                                 operationCenter = OperationCenter()
                                 operationCenter.breachSellHoldings(value)
     return "Query received"

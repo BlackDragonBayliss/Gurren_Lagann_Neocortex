@@ -57,13 +57,12 @@ class OperationCenter:
     def breachSellHoldings(self, holdings):
         #Verify that holdings have been sold
         listResults = self.typeConverter.parseHoldingQueryString(holdings)
-        print("breachSellHoldings "+listResults[1])
+        quantityOfShares = listResults[1]
 
-        if(listResults[1] != 0):
+        #if listResults
+        if(quantityOfShares != 0):
             print("canceling perpetualTimerSellBreachWatch")
             self.perpetualTimerSellBreachWatch.cancel()
-
-
 
 
     def breachBuy(self, stringQuery):

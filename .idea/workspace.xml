@@ -4,11 +4,7 @@
     <list default="true" id="45e704b3-db94-4394-a9ad-050adda9498a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API.py" afterPath="$PROJECT_DIR$/API.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTTPUtility.py" afterPath="$PROJECT_DIR$/HTTPUtility.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OperationCenter.py" afterPath="$PROJECT_DIR$/OperationCenter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PerpetualTimer.py" afterPath="$PROJECT_DIR$/PerpetualTimer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TypeConverter.py" afterPath="$PROJECT_DIR$/TypeConverter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing.py" afterPath="$PROJECT_DIR$/testing.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +18,8 @@
       <file leaf-file-name="API.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="106" column="13" lean-forward="true" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+            <state relative-caret-position="219">
+              <caret line="80" column="64" lean-forward="false" selection-start-line="80" selection-start-column="64" selection-end-line="80" selection-end-column="64" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -34,8 +30,8 @@
       <file leaf-file-name="OperationCenter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OperationCenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="249">
+              <caret line="114" column="47" lean-forward="false" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -68,8 +64,8 @@
       <file leaf-file-name="HTTPUtility.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HTTPUtility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="192">
+              <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="44" />
               <folding>
                 <element signature="e#1#15#0" expanded="true" />
               </folding>
@@ -80,8 +76,8 @@
       <file leaf-file-name="TypeConverter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TypeConverter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="195" column="63" lean-forward="false" selection-start-line="195" selection-start-column="60" selection-end-line="195" selection-end-column="63" />
+            <state relative-caret-position="303">
+              <caret line="200" column="56" lean-forward="false" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -140,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>calculateLooseMarkationList</find>
       <find>chronBeginWatch</find>
       <find>beginWatchListResult</find>
       <find>calculateFullRangeList</find>
@@ -169,6 +164,7 @@
       <find>parse_stock_query</find>
       <find>sell</find>
       <find>parseHoldingQueryString</find>
+      <find>breachSellHoldings</find>
       <find>async_breach_sell</find>
     </findStrings>
   </component>
@@ -216,8 +212,8 @@
         <option value="$PROJECT_DIR$/TypeConverter.py" />
         <option value="$PROJECT_DIR$/HTTPUtility.py" />
         <option value="$PROJECT_DIR$/testing.py" />
-        <option value="$PROJECT_DIR$/API.py" />
         <option value="$PROJECT_DIR$/PerpetualTimer.py" />
+        <option value="$PROJECT_DIR$/API.py" />
         <option value="$PROJECT_DIR$/OperationCenter.py" />
       </list>
     </option>
@@ -292,6 +288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21816881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -633,24 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TypeConverter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="195" column="63" lean-forward="false" selection-start-line="195" selection-start-column="60" selection-end-line="195" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTTPUtility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -671,18 +650,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="106" column="13" lean-forward="true" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+        <state relative-caret-position="219">
+          <caret line="80" column="64" lean-forward="false" selection-start-line="80" selection-start-column="64" selection-end-line="80" selection-end-column="64" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TypeConverter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="200" column="56" lean-forward="false" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTPUtility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OperationCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        <state relative-caret-position="249">
+          <caret line="114" column="47" lean-forward="false" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
