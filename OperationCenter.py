@@ -104,9 +104,6 @@ class OperationCenter:
         asyncio.set_event_loop(loop)
         response = loop.run_until_complete(self.httpUtility.async_get_stock_query("VICI"))
 
-        #Handle test information vici stats, parse stats into variables
-        print(response)
-
         listResults = self.typeConverter.parseBreachStockQueryString(response)
         # print(listResults[0] + " " + listResults[1] + " " + listResults[2] + " " + listResults[3] + " " + listResults[4])
 
